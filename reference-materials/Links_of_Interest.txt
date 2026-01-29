@@ -1,0 +1,21 @@
+# FROM JASON
+
+# Main repo
+https://github.com/Azure/AI-Landing-Zones
+
+# Design checklist
+https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md
+
+# Deploy your own application in Production
+https://github.com/microsoft/Deploy-Your-AI-Application-In-Production?tab=readme-ov-file
+
+# FROM AQ:
+
+https://techcommunity.microsoft.com/blog/azurearchitectureblog/accelerating-enterprise-ai-adoption-with-azure-ai-landing-zone/4460199
+
+
+
+
+
+
+
