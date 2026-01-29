@@ -54,9 +54,8 @@ The AI Landing Zone architecture includes:
 
 - Arturo Quiroga - Partner Solutions Architect (PSA)
 - Jason Virtue - Partner Solutions Architect (PSA)
-- Anahita Afshari - Partner Solutions Integrator (PSI)
-- Ana Lopez Moreno - Partner Solutions Integrator (PSI)
-- Devanshi Thakar - Partner Solutions Integrator (PSI)
+- Anahita Afshari - Partner Solutions Architect (PSA)
+
 
 ## 📅 Timeline
 
