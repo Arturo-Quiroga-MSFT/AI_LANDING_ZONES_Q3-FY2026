@@ -70,6 +70,5 @@ secrets/
 node_modules/
 npm-debug.log*
 
-# Large files (exceeds GitHub 100MB limit)
-presentations/*.pptx
-*.pptx
+# Large files now handled by Git LFS
+# (*.pptx tracked via .gitattributes)
