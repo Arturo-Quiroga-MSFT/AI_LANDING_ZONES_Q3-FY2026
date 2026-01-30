@@ -11,6 +11,15 @@
 
 This workshop introduces partners to Azure AI Landing Zones, covering core concepts, architecture patterns, and the official design checklist. By the end, participants will understand how to assess customer needs and select appropriate AI Landing Zone configurations.
 
+### 📌 Key Foundation Concept
+
+> **AI Landing Zones are Application Landing Zones** within the [Cloud Adoption Framework (CAF)](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/). They are NOT a separate landing zone type—they deploy INTO existing Azure Landing Zone architectures or standalone.
+>
+> - **With Platform Landing Zone**: Leverages existing hub networking, firewall, DNS, Bastion (enterprise customers)
+> - **Without Platform Landing Zone**: Standalone deployment with own networking (PoCs, greenfield)
+>
+> 📚 Pre-read: [AI in Azure Landing Zones](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#ai-in-azure-landing-zones)
+
 ---
 
 ## 👥 Target Audience

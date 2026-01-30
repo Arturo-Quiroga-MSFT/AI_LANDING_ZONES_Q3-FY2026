@@ -6,6 +6,8 @@ Technical assets and guidance for Microsoft partners implementing Azure AI Landi
 
 This repository contains comprehensive guidance, workshops, and reference architectures to help Microsoft partners design, deploy, and operate enterprise-scale Azure AI Landing Zones. The content builds upon the official [Azure AI Landing Zones](https://github.com/Azure/AI-Landing-Zones) framework and incorporates best practices from Azure Foundry templates.
 
+> **📌 Key Concept**: Azure AI Landing Zones are **application landing zones** within the [Cloud Adoption Framework (CAF)](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/). They are NOT a separate landing zone type—they deploy INTO existing Azure Landing Zone architectures or as standalone environments. See [AI in Azure Landing Zones](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#ai-in-azure-landing-zones) for official guidance.
+
 **Target Audience**: Microsoft partners, solution architects, and technical consultants working with enterprise customers on AI adoption.
 
 **Program**: AI Center of Excellence V2 - Partner Enablement

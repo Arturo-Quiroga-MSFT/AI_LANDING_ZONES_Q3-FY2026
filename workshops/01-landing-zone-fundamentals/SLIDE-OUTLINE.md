@@ -51,13 +51,28 @@
 - Available as: Bicep, Terraform, Portal (coming soon)
 - **Source**: [Azure/AI-Landing-Zones](https://github.com/Azure/AI-Landing-Zones)
 
-### Slide 7: Relationship to Azure Landing Zones
-- AI Landing Zone is an **Application Landing Zone**
-- Can deploy with or without **Platform Landing Zone**
-- Follows Cloud Adoption Framework (CAF)
-- Aligns with Well-Architected Framework (WAF)
+### Slide 7: Where AI Landing Zones Fit in CAF
+- **CAF Landing Zone Hierarchy**:
+  - **Platform Landing Zone**: Shared services (Identity, Connectivity, Management) owned by central IT
+  - **Application Landing Zone**: Where workloads deploy - **AI Landing Zone goes here**
+- AI is just another workload from CAF perspective
+- NOT a separate landing zone type
+- **Ref**: [AI in Azure Landing Zones](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#ai-in-azure-landing-zones)
 
-### Slide 8: CAF AI Scenario Alignment
+### Slide 8: Platform vs Application Landing Zone
+- **Platform Team Provides** (in "with platform" scenario):
+  - Hub virtual network, Azure Firewall, VPN/ExpressRoute
+  - Azure Bastion for jump box access
+  - Private DNS zones, DDoS protection
+  - Governance policies at management group level
+- **Workload Team Owns** (AI Landing Zone):
+  - Spoke virtual network subnets, NSGs
+  - AI Foundry, AI Search, Cosmos DB, App Service
+  - Private endpoints to PaaS services
+  - Workload-specific monitoring
+- **Partner Question**: Does your customer have existing Platform LZ?
+
+### Slide 9: CAF AI Scenario Alignment
 - AI Landing Zone is part of "AI Ready" stage
 - Specifically: "AI on Azure Platforms (PaaS)"
 - Links to CAF AI Strategy and Checklist

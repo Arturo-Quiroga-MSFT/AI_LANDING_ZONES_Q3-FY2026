@@ -8,6 +8,30 @@
 
 ## 🎯 Start Here
 
+### Understanding How AI Landing Zones Fit in CAF
+
+> **📌 Critical Context for Partners**: Azure AI Landing Zones are **application landing zones** within the broader [Cloud Adoption Framework (CAF)](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/) architecture. They are NOT a separate type of landing zone—they deploy INTO your customer's existing Azure Landing Zone hierarchy.
+
+| Concept | What It Is | Partner Implication |
+|---------|------------|---------------------|
+| **Platform Landing Zone** | Shared services (Identity, Connectivity, Management) managed by central IT | Your AI workload will use these services (hub network, firewall, DNS, Bastion) |
+| **Application Landing Zone** | Subscription(s) where workloads run | **AI Landing Zone deploys here** |
+| **AI Landing Zone** | Application landing zone accelerator for AI workloads | Choose "with platform" or "without platform" architecture |
+
+**Key Decision for Partners:**
+- **Customer has existing Azure Landing Zones?** → Use "AI Landing Zone with Platform Landing Zone" architecture
+- **Greenfield/PoC/No existing LZ?** → Use "AI Landing Zone without Platform Landing Zone" (standalone)
+
+📚 **CAF References** (skim before customer engagements):
+- [What is an Azure Landing Zone?](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/) - Core concepts (5 min read)
+- [Platform vs Application Landing Zones](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#platform-landing-zone-vs-application-landing-zones) - Key distinction
+- [AI in Azure Landing Zones](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#ai-in-azure-landing-zones) - Official positioning
+- [Baseline Foundry in Landing Zone](https://learn.microsoft.com/azure/architecture/ai-ml/architecture/baseline-microsoft-foundry-landing-zone) - Detailed reference architecture
+
+---
+
+### Quick Navigation
+
 Before diving into details, understand the big picture:
 
 | If You Need To... | Go Here |
