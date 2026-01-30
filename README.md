@@ -8,23 +8,41 @@ This repository contains comprehensive guidance, workshops, and reference archit
 
 **Target Audience**: Microsoft partners, solution architects, and technical consultants working with enterprise customers on AI adoption.
 
+**Program**: AI Center of Excellence V2 - Partner Enablement
+
 ## 📋 Key Deliverables
 
-- **Presentation Decks**: Ready-to-use content for partner enablement sessions
-- **Hands-On Workshops**: Practical labs demonstrating AI Landing Zone implementation
-- **Design Guidance**: Architecture patterns, decision trees, and checklists
-- **Reference Materials**: Links to official documentation and community resources
+### Partner Enablement Guides (Available Now)
+- **[Partner Quick Reference Guide](docs/PARTNER-QUICK-REFERENCE.md)**: Curated navigation through official AI Landing Zone resources
+- **[IaC Decision Framework](docs/IAC-DECISION-FRAMEWORK.md)**: Guidance for choosing between azd, Bicep, Terraform, or Portal deployments
+- **[Deliverables Roadmap](docs/DELIVERABLES-ROADMAP.md)**: Project plan with task ownership and milestones
+
+### Workshops
+- **[Workshop 1: Landing Zone Fundamentals](workshops/01-landing-zone-fundamentals/)**: 2-3 hour introduction to AI Landing Zones (in development)
+- **Workshop 2: Deploying Your First Gen AI Workload**: Hands-on deployment lab (planned)
+- **Workshop 3: Landing Zones to Production**: Gen AI OPS bridge (planned)
+
+### Tools & Workbooks
+- **AI Landing Zones Workbook**: Excel-based assessment and planning tool (in `/workbooks/`)
+- **Design Checklist**: Interactive version of official checklist for customer engagements
 
 ## 📁 Repository Structure
 
 ```
 .
+├── docs/                   # Partner enablement guides and documentation
+│   ├── PARTNER-QUICK-REFERENCE.md   # Start here for navigation
+│   ├── IAC-DECISION-FRAMEWORK.md    # IaC selection guidance
+│   ├── DELIVERABLES-ROADMAP.md      # Project plan and tasks
+│   └── TEAM-COORDINATION.md         # Collaboration guide
+├── workshops/              # Hands-on lab guides and exercises
+│   └── 01-landing-zone-fundamentals/
+├── workbooks/              # Excel-based assessment and planning tools
 ├── presentations/          # Partner-facing presentation decks
-├── workshops/             # Hands-on lab guides and exercises
-├── architecture/          # Architecture diagrams and design patterns
-├── docs/                  # Technical documentation and guides
-├── templates/             # Reusable templates (IaC, checklists, etc.)
-└── reference-materials/   # Links and external resources
+├── architecture/           # Architecture diagrams and design patterns
+├── diagrams/               # Source files for diagrams
+├── templates/              # Reusable templates (IaC, checklists, etc.)
+└── reference-materials/    # Links and external resources
 ```
 
 ## 🏗️ Architecture Scope
@@ -39,33 +57,47 @@ The AI Landing Zone architecture includes:
 
 ## 🚀 Getting Started
 
-1. **Review Architecture**: Start with the diagrams in `/architecture` to understand the overall structure
-2. **Read Design Guidance**: Check `/docs` for decision frameworks and best practices
-3. **Explore Workshops**: Use `/workshops` for hands-on learning experiences
-4. **Leverage Templates**: Adapt materials from `/templates` for your customer engagements
+1. **Start Here**: Read the [Partner Quick Reference Guide](docs/PARTNER-QUICK-REFERENCE.md) for curated paths through official resources
+2. **Choose IaC Approach**: Use the [IaC Decision Framework](docs/IAC-DECISION-FRAMEWORK.md) to select deployment method
+3. **Review Workbooks**: Check `/workbooks/` for Excel-based assessment tools
+4. **Explore Workshops**: Use [Workshop 1](workshops/01-landing-zone-fundamentals/) for hands-on learning
+5. **Track Progress**: See [Deliverables Roadmap](docs/DELIVERABLES-ROADMAP.md) for project status
 
 ## 📚 Key References
 
+### Official Microsoft Resources
 - [Azure AI Landing Zones (Official)](https://github.com/Azure/AI-Landing-Zones)
 - [AI Landing Zones Design Checklist](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md)
 - [Deploy Your AI Application in Production](https://github.com/microsoft/Deploy-Your-AI-Application-In-Production)
 
+### Framework Alignment
+- [Cloud Adoption Framework - AI Scenario](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/ai/)
+- [Well-Architected Framework - AI Workloads](https://learn.microsoft.com/azure/well-architected/ai/)
+
 ## 👥 Contributors
 
-- Arturo Quiroga - Partner Solutions Architect (PSA)
-- Jason Virtue - Partner Solutions Architect (PSA)
-- Anahita Afshari - Partner Solutions Architect (PSA)
+### AI Landing Zones Team
+- **Arturo Quiroga** - Partner Solutions Architect (PSA) - Architecture & Deliverables
+- **Anahita Afshari** - Partner Solutions Architect (PSA) - Workshop Development
+- **Jason Virtue** - Partner Solutions Architect (PSA) - Program Lead
+
+### Gen AI OPS Collaboration
+- **Ana Lopez Moreno** - Partner Solutions Integrator (PSI) - Gen AI OPS Accelerator
 
 
 ## 📅 Timeline
 
 - **Q3 FY2026**: Initial development and partner feedback
-- **Review Date**: Late January 2026
-- **Target**: Production-ready partner enablement materials
+- **Jan 29, 2026**: Phase 1 complete - Partner enablement guides and Workshop 1 foundation
+- **Feb 2026**: Workshop pilots and IaC template development
+- **Mar 2026**: V2 contribution ready for AI CoE
 
 ## 🤝 Contributing
 
-This is an internal Microsoft project for partner enablement. Team members should follow the contribution guidelines in the `/docs` folder.
+This is an internal Microsoft project for partner enablement. Team members should:
+- Review the [Team Coordination Guide](docs/TEAM-COORDINATION.md) for collaboration processes
+- Check the [Deliverables Roadmap](docs/DELIVERABLES-ROADMAP.md) for task ownership
+- Follow the "reference, don't recreate" principle - link to official docs when possible
 
 ## 📄 License
 
@@ -73,5 +105,6 @@ Microsoft Internal Use - Partner Enablement
 
 ---
 
-**Last Updated**: January 23, 2026  
-**Status**: Active Development 🚧
+**Last Updated**: January 30, 2026  
+**Status**: Active Development 🚧  
+**Phase**: 1 Complete - Partner Enablement Guides
