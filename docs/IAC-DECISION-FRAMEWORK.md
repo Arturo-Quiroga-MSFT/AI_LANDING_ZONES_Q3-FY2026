@@ -26,11 +26,11 @@
     │  (Deploy-Your-  │              Does customer have
     │   AI-App repo)  │              multi-cloud strategy?
     └─────────────────┘                          │
-                                   ┌─────────────┴─────────────┐
-                                   │                           │
-                                  YES                         NO
-                                   │                           │
-                                   ▼                           │
+                                   ┌─────────────┴────────────┐
+                                   │                          │
+                                  YES                        NO
+                                   │                          │
+                                   ▼                          │
                           ┌─────────────────┐                 │
                           │   Terraform     │      Is team Azure-native
                           │                 │      with Bicep experience?
