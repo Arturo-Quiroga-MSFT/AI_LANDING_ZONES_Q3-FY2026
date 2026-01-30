@@ -16,11 +16,11 @@
                     Need fastest deployment?
                          (< 1 hour)
                                 │
-              ┌─────────────────┴─────────────────┐
-              │                                   │
-             YES                                 NO
-              │                                   │
-              ▼                                   │
+              ┌─────────────────┴────────────────┐
+              │                                  │
+             YES                                NO
+              │                                  │
+              ▼                                  │
     ┌─────────────────┐                          │
     │  azd up         │                          │
     │  (Deploy-Your-  │              Does customer have
