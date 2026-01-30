@@ -268,6 +268,19 @@ The AI Landing Zone follows:
 
 ## 📚 Additional Learning
 
+### 🎓 MS Learn Training (Recommended First!)
+
+| Resource | Duration | Description |
+|----------|----------|-------------|
+| [**AI Center of Excellence Learning Path**](https://learn.microsoft.com/training/paths/ai-center-excellence/) | 1 hr 34 min | Complete learning path covering all 3 modules below |
+| [Introduction to AI Center of Excellence](https://learn.microsoft.com/training/modules/intro-ai-center-excellence/) | 29 min | AI adoption planning, governance, roles & responsibilities |
+| [Introduction to AI Landing Zones](https://learn.microsoft.com/training/modules/intro-ai-landing-zones/) | 28 min | Landing zone concepts, platform vs workload teams, deployment |
+| [Guide AI workload operations](https://learn.microsoft.com/training/modules/guide-ai-operations-center-excellence/) | 37 min | GenAIOps, security, compliance, cost management, monitoring |
+
+> **💡 Partner Tip**: Have your team complete the "Introduction to AI Landing Zones" module before workshops!
+
+### Azure Service Documentation
+
 | Resource | Description |
 |----------|-------------|
 | [Azure AI Foundry Documentation](https://learn.microsoft.com/azure/ai-foundry/) | Core AI development platform |

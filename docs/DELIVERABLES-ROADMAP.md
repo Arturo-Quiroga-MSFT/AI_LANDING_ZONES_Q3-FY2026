@@ -386,6 +386,17 @@
 
 ## 📚 Official Resources We Reference (Don't Recreate)
 
+### 🎓 MS Learn Training (Recommended for All Partners)
+
+| Module | Duration | Topics |
+|--------|----------|--------|
+| [**AI Center of Excellence Learning Path**](https://learn.microsoft.com/training/paths/ai-center-excellence/) | 1 hr 34 min | Complete path covering all modules below |
+| [Introduction to AI Center of Excellence](https://learn.microsoft.com/training/modules/intro-ai-center-excellence/) | 29 min | AI adoption, governance, roles & responsibilities |
+| [Introduction to AI Landing Zones](https://learn.microsoft.com/training/modules/intro-ai-landing-zones/) | 28 min | Landing zone concepts, platform vs workload teams |
+| [Guide AI workload operations](https://learn.microsoft.com/training/modules/guide-ai-operations-center-excellence/) | 37 min | GenAIOps, security, compliance, cost, monitoring |
+
+### GitHub Repositories & Documentation
+
 | Resource | What It Covers | We Add |
 |----------|---------------|--------|
 | [AI-Landing-Zones Design Checklist](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md) | 40+ recommendations across Networking, Identity, Security, Compute, Data, Monitoring, Governance, Cost, Reliability | Partner navigation + scenario mapping |

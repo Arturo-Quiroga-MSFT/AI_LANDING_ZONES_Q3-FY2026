@@ -65,6 +65,12 @@ The AI Landing Zone architecture includes:
 
 ## 📚 Key References
 
+### MS Learn Training Path
+- **[AI Center of Excellence Learning Path](https://learn.microsoft.com/training/paths/ai-center-excellence/)** (1 hr 34 min) - Start here!
+  - [Introduction to AI Center of Excellence](https://learn.microsoft.com/training/modules/intro-ai-center-excellence/) (29 min)
+  - [Introduction to AI Landing Zones](https://learn.microsoft.com/training/modules/intro-ai-landing-zones/) (28 min)
+  - [Guide AI workload operations](https://learn.microsoft.com/training/modules/guide-ai-operations-center-excellence/) (37 min)
+
 ### Official Microsoft Resources
 - [Azure AI Landing Zones (Official)](https://github.com/Azure/AI-Landing-Zones)
 - [AI Landing Zones Design Checklist](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md)

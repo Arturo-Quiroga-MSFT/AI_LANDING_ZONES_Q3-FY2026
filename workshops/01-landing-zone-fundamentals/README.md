@@ -34,7 +34,9 @@ This workshop introduces partners to Azure AI Landing Zones, covering core conce
 - GitHub access (to view official repositories)
 - Internet access for documentation references
 
-### Recommended Preparation
+### Recommended Preparation (Pre-Work)
+- **🎓 Complete MS Learn Module** (28 min): [Introduction to AI Landing Zones](https://learn.microsoft.com/training/modules/intro-ai-landing-zones/) ⭐ *Highly Recommended*
+- **Optional** (1 hr 34 min): Full [AI Center of Excellence Learning Path](https://learn.microsoft.com/training/paths/ai-center-excellence/)
 - Review the [Partner Quick Reference Guide](../../docs/PARTNER-QUICK-REFERENCE.md)
 - Skim the [Design Checklist](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md)
 
