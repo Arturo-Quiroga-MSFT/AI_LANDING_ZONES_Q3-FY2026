@@ -644,6 +644,6 @@ Send within 48 hours with:
 
 ---
 
-**Workshop Owner**: Anahita Afshari (PSI)  
+**Workshop Owner**: Anahita Afshari (PSA)  
 **Last Updated**: January 29, 2026  
 **Status**: 🚧 Draft - Ready for Review

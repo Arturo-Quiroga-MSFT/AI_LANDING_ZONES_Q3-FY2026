@@ -82,7 +82,7 @@ The AI Landing Zone architecture includes:
 - **Jason Virtue** - Partner Solutions Architect (PSA) - Program Lead
 
 ### Gen AI OPS Collaboration
-- **Ana Lopez Moreno** - Partner Solutions Integrator (PSI) - Gen AI OPS Accelerator
+- **Ana Lopez Moreno** - Partner Solution Architect (PSA) - Gen AI OPS Accelerator
 
 
 ## 📅 Timeline

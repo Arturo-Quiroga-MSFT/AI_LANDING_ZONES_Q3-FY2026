@@ -1,6 +1,6 @@
 # AI Landing Zones - Deliverables Roadmap
 
-**Co-Leads**: Arturo Quiroga (PSA) & Anahita Afshari (PSI)  
+**Co-Leads**: Arturo Quiroga (PSA) & Anahita Afshari (PSA)  
 **Program**: AI Center of Excellence V2  
 **Focus Areas**: AI Landing Zones (Primary) | Gen AI OPS (Secondary/Overlapping)  
 **Timeline**: Q3 FY2026
@@ -18,67 +18,84 @@
 
 ## 📦 Phase 1: Foundation & Architecture (Weeks 1-3)
 
-### 1.1 Reference Architecture Documentation
-**Status**: 🚧 In Progress  
+### 1.0 Partner Enablement Foundation ✅ COMPLETED
+**Status**: ✅ Done  
 **Priority**: P0
 
-- [ ] **Architecture Decision Records (ADRs)** 👤 *Arturo*
-  - Document key design decisions for Landing Zone patterns
-  - Compare Bicep vs Terraform vs Portal implementations
-  - Recommendation matrix by customer scenario
+- [x] **Partner Quick Reference Guide** 👤 *Arturo* → `/docs/PARTNER-QUICK-REFERENCE.md`
+  - Curated navigation through official AI Landing Zone resources
+  - 4 partner personas with tailored learning paths
+  - Quick links to all official documentation sections
   
-- [ ] **Network Topology Patterns** 👤 *Anahita*
-  - Hub-spoke with private endpoints
-  - Single VNet vs multi-VNet scenarios
-  - Integration with existing Enterprise Landing Zones
-  
-- [ ] **Security & Identity Blueprint** 👤 *Arturo*
-  - Managed Identity patterns for AI services
-  - Private endpoint configuration guide
-  - Key Vault integration and secrets management
-  - Entra ID integration patterns
+- [x] **IaC Decision Framework** 👤 *Arturo* → `/docs/IAC-DECISION-FRAMEWORK.md`
+  - Decision tree: azd vs Bicep vs Terraform vs Portal
+  - Comparison matrix with partner-focused criteria
+  - Scenario-based recommendations
 
-**Deliverables**:
-- `/docs/architecture-decision-records/` folder with ADRs *(Arturo)*
-- `/architecture/network-patterns.md` with diagrams *(Anahita)*
-- `/docs/security-blueprint.md` *(Arturo)*
+- [x] **Workshop 1 Foundation** 👤 *Anahita* → `/workshops/01-landing-zone-fundamentals/`
+  - README, SLIDE-OUTLINE (49 slides), WORKSHOP-GUIDE created
+  - Needs: EXERCISES.md, actual PowerPoint file
+
+---
+
+### 1.1 Partner Navigation Guides (Reference Official Content)
+**Status**: 🔄 Reframed  
+**Priority**: P1  
+**Approach**: *Create partner cheat sheets that navigate official content—don't recreate what exists*
+
+> **📌 Key Insight**: The official repos already have comprehensive coverage:
+> - **Design Checklist**: 40+ recommendations across Networking (N-R1-9), Identity (I-R1-6), Security (S-R1-5)
+> - **Architecture Diagrams**: With/without Platform Landing Zone variants
+> - **Deploy-Your-AI-App**: Security Guidelines, Required Roles & Scopes docs
+
+- [ ] **Quick Decision Cards** 👤 *Arturo* *(Optional enhancement)*
+  - 1-page cheat sheets for common partner questions
+  - Maps partner scenarios → official checklist sections
+  - *Reference*: [AI-Landing-Zones-Design-Checklist.md](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md)
+  
+- [ ] **Network Patterns Quick Reference** 👤 *Anahita* *(Optional enhancement)*
+  - 1-page summary linking to N-R1 through N-R9
+  - Visual decision tree for hub-spoke vs standalone
+  - *Reference*: Official architecture diagrams + Design Checklist Networking section
+  
+- [ ] **Security & Identity Cheat Sheet** 👤 *Arturo* *(Optional enhancement)*
+  - Quick reference linking to I-R1-6 and S-R1-5 
+  - Common partner security questions answered
+  - *Reference*: [Required Roles & Scopes](https://github.com/microsoft/Deploy-Your-AI-Application-In-Production/blob/main/docs/roles-scopes.md)
+
+**Deliverables** (Simplified):
+- `/docs/cheatsheets/decisions.md` - 1-page decision helper *(Arturo, optional)*
+- `/docs/cheatsheets/networking.md` - Network patterns quick ref *(Anahita, optional)*
+- `/docs/cheatsheets/security-identity.md` - Security quick ref *(Arturo, optional)*
+
+> **💡 Recommendation**: Skip creating these entirely unless partners specifically request them. The existing official docs + our Quick Reference Guide should suffice.
 
 ---
 
 ### 1.2 Component Deep-Dives
-**Status**: 📋 Planned  
-**Priority**: P0
+**Status**: � Reframed  
+**Priority**: P2 *(Deprioritized - official docs cover this well)*
 
-- [ ] **Azure AI Foundry Service** 👤 *Anahita*
-  - Setup and configuration guide
-  - Connection management best practices
-  - Model deployment patterns
-  
-- [ ] **Container Apps Environment** 👤 *Arturo*
-  - Microservices architecture for GenAI apps
-  - Scaling and resilience patterns
-  - Integration with backing services
-  
-- [ ] **Data & Knowledge Layer** 👤 *Anahita*
-  - Cosmos DB for chat history and context
-  - AI Search for RAG patterns
-  - Storage account structure and lifecycle
+> **📌 Official Coverage**: The Design Checklist covers Compute (C-R1), Data (D-R1-3), and all component configuration. The Deploy-Your-AI-App repo includes working Bicep for AI Foundry, Container Apps, Cosmos DB, AI Search.
 
-**Deliverables**:
-- `/docs/components/ai-foundry.md` *(Anahita)*
-- `/docs/components/container-apps.md` *(Arturo)*
-- `/docs/components/data-knowledge.md` *(Anahita)*
-- Real-world configuration examples *(Both)*
+- [ ] **Partner Configuration Scenarios** 👤 *Both* *(Only if needed)*
+  - Real-world parameter combinations for common partner scenarios
+  - Troubleshooting tips beyond official docs
+  - *Approach*: Add as workshop exercises rather than standalone docs
+
+**Deliverables** (Simplified):
+- Integrated into Workshop 2 hands-on labs instead of standalone documents
+- Focus on partner-specific scenarios not covered in official docs
 
 ---
 
 ## 📦 Phase 2: Hands-On Enablement (Weeks 3-5)
 
 ### 2.1 Workshop Development
-**Status**: 📋 Planned  
+**Status**: � In Progress  
 **Priority**: P0
 
-- [ ] **Workshop 1: AI Landing Zone Fundamentals** 👤 *Anahita* (Lead) + *Arturo* (Review)
+- [~] **Workshop 1: AI Landing Zone Fundamentals** 👤 *Anahita* (Lead) + *Arturo* (Review) → **Foundation Complete**
   - Duration: 2-3 hours
   - Audience: Partner architects and engineers
   - Topics:
@@ -313,9 +330,9 @@
 
 ### Internal Coordination
 - **Jason Virtue (PSA)**: Overall AI CoE program lead, Landing Zones initiative
-- **Ana Lopez Moreno (PSI)**: Gen AI OPS accelerator, hands-on labs
-- **Anahita Afshari (PSI)**: Landing Zones collaboration, workshop development and delivery
-- **Devanshi Thakar (PSI)**: Responsible AI integration
+- **Ana Lopez Moreno (PSA)**: Gen AI OPS accelerator, hands-on labs
+- **Anahita Afshari (PSA)**: Landing Zones collaboration, workshop development and delivery
+- **Devanshi Thakar (PSA)**: Responsible AI integration
 - **Lucy**: Discovery Cards and partner program alignment
 
 ### Cross-Program Touchpoints
@@ -330,9 +347,12 @@
 | Milestone | Target Date | Status |
 |-----------|-------------|--------|
 | Repository structure complete | Jan 29, 2026 | ✅ Done |
-| Phase 1 architecture docs | Feb 7, 2026 | 🚧 In Progress |
-| Workshop 1 draft complete | Feb 14, 2026 | 📋 Planned |
-| IaC templates v1 | Feb 21, 2026 | 📋 Planned |
+| Partner Quick Reference Guide | Jan 30, 2026 | ✅ Done |
+| IaC Decision Framework | Jan 30, 2026 | ✅ Done |
+| Workshop 1 foundation (outline) | Jan 30, 2026 | ✅ Done |
+| Phase 1 cheat sheets | Feb 7, 2026 | 🔄 Optional (official docs sufficient) |
+| Workshop 1 complete (slides + exercises) | Feb 14, 2026 | 🚧 In Progress |
+| Workshop 2 draft complete | Feb 21, 2026 | 📋 Planned |
 | Pilot workshop delivery | Feb 28, 2026 | 📋 Planned |
 | Final review and refinement | Mar 7, 2026 | 📋 Planned |
 | V2 contribution ready | Mar 14, 2026 | 📋 Planned |
@@ -356,13 +376,25 @@
 
 ### Risks & Mitigations
 - **Risk**: Content duplication with official Azure repo
-  - **Mitigation**: Focus on partner enablement layer, reference official docs
+  - **Mitigation**: ✅ Adopted "reference, don't recreate" approach. Our guides navigate to official content.
 - **Risk**: Templates become outdated as services evolve
-  - **Mitigation**: Version control, quarterly review cycles
+  - **Mitigation**: Version control, quarterly review cycles, link to official repos
 - **Risk**: Workshop complexity too high for target audience
   - **Mitigation**: Multiple difficulty levels, optional deep-dives
 
 ---
 
-**Last Updated**: January 29, 2026  
+## 📚 Official Resources We Reference (Don't Recreate)
+
+| Resource | What It Covers | We Add |
+|----------|---------------|--------|
+| [AI-Landing-Zones Design Checklist](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md) | 40+ recommendations across Networking, Identity, Security, Compute, Data, Monitoring, Governance, Cost, Reliability | Partner navigation + scenario mapping |
+| [AI-Landing-Zones Architecture Diagrams](https://github.com/Azure/AI-Landing-Zones) | With/without Platform LZ variants, Bicep & Terraform implementations | When to use which pattern |
+| [Deploy-Your-AI-App Required Roles](https://github.com/microsoft/Deploy-Your-AI-Application-In-Production/blob/main/docs/roles-scopes.md) | IAM requirements for deployment | Partner-specific permission scenarios |
+| [Deploy-Your-AI-App Security Guidelines](https://github.com/microsoft/Deploy-Your-AI-Application-In-Production/blob/main/SECURITY.md) | Security best practices | Hands-on workshop exercises |
+| [azd Parameter Guide](https://github.com/microsoft/Deploy-Your-AI-Application-In-Production/blob/main/docs/ParameterGuide.md) | All deployment parameters | Common partner configurations |
+
+---
+
+**Last Updated**: January 30, 2026  
 **Next Review**: February 5, 2026

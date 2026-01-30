@@ -2,7 +2,7 @@
 
 **Duration**: 2-3 hours  
 **Level**: 200 (Intermediate)  
-**Lead**: Anahita Afshari (PSI)  
+**Lead**: Anahita Afshari (PSA)  
 **Reviewer**: Arturo Quiroga (PSA)
 
 ---
@@ -217,6 +217,6 @@ After the workshop, collect feedback using:
 
 ---
 
-**Workshop Owner**: Anahita Afshari (PSI)  
+**Workshop Owner**: Anahita Afshari (PSA)  
 **Last Updated**: January 29, 2026  
 **Status**: 🚧 Draft - In Development
