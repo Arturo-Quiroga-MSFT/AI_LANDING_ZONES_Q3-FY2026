@@ -47,16 +47,20 @@
 > - **Design Checklist**: 40+ recommendations across Networking (N-R1-9), Identity (I-R1-6), Security (S-R1-5)
 > - **Architecture Diagrams**: With/without Platform Landing Zone variants
 > - **Deploy-Your-AI-App**: Security Guidelines, Required Roles & Scopes docs
+> - **Enterprise-Scale (ALZ)**: Comprehensive network topology guidance (hub-spoke, Virtual WAN, connectivity design area)
 
 - [ ] **Quick Decision Cards** 👤 *Arturo* *(Optional enhancement)*
   - 1-page cheat sheets for common partner questions
   - Maps partner scenarios → official checklist sections
   - *Reference*: [AI-Landing-Zones-Design-Checklist.md](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md)
   
-- [ ] **Network Patterns Quick Reference** 👤 *Anahita* *(Optional enhancement)*
-  - 1-page summary linking to N-R1 through N-R9
-  - Visual decision tree for hub-spoke vs standalone
-  - *Reference*: Official architecture diagrams + Design Checklist Networking section
+- [x] **Network Topology Guidance** 👤 *N/A - Reference existing content*
+  - ~~1-page summary linking to N-R1 through N-R9~~
+  - **Decision**: Reference [Enterprise-Scale Wiki](https://github.com/Azure/Enterprise-Scale/wiki) and CAF network topology docs instead of creating new content
+  - *References*:
+    - [Enterprise-Scale Network Topology](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Setup-azure#2-networking-topology-and-connectivity)
+    - [CAF Network Topology & Connectivity](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity)
+    - [Hub-Spoke vs Virtual WAN](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology)
   
 - [ ] **Security & Identity Cheat Sheet** 👤 *Arturo* *(Optional enhancement)*
   - Quick reference linking to I-R1-6 and S-R1-5 
@@ -92,12 +96,21 @@
 ## 📦 Phase 2: Hands-On Enablement (Weeks 3-5)
 
 ### 2.1 Workshop Development
-**Status**: � In Progress  
+**Status**: 🚧 In Progress  
 **Priority**: P0
+
+> **📌 Workshop-to-Pillar Alignment**: Our workshops map to the 6 Pillars of Production Readiness framework used by Microsoft field teams. See [Partner Engagement Methodology](./PARTNER-ENGAGEMENT-METHODOLOGY.md) for the full delivery framework.
+
+| Workshop | Pillars Covered | Phase Alignment |
+|----------|-----------------|-----------------|
+| Workshop 1 | AI CoE, AI Landing Zones, Responsible AI | Scoping & Discovery |
+| Workshop 2 | AI Landing Zones, Solution Optimization | Assessment & Deployment |
+| Workshop 3 | GenAIOps, Solution Optimization | Production & Closeout |
 
 - [~] **Workshop 1: AI Landing Zone Fundamentals** 👤 *Anahita* (Lead) + *Arturo* (Review) → **Foundation Complete**
   - Duration: 2-3 hours
   - Audience: Partner architects and engineers
+  - **Pillars**: AI CoE (context), AI Landing Zones (deep), Responsible AI (governance)
   - Topics:
     - Landing Zone concepts and Azure integration
     - Network security and private connectivity
@@ -107,6 +120,7 @@
 - [ ] **Workshop 2: Deploying Your First Gen AI Workload** 👤 *Arturo* (Lead) + *Anahita* (Review)
   - Duration: 3-4 hours (hands-on)
   - Audience: Technical partners with Azure experience
+  - **Pillars**: AI Landing Zones (hands-on), Solution Optimization
   - Topics:
     - Deploy foundational Landing Zone infrastructure
     - Configure AI Foundry Service and connections
@@ -116,6 +130,7 @@
 - [ ] **Workshop 3: Landing Zones to Production (Gen AI OPS Bridge)** 👤 *Arturo* (Lead) + *Ana Lopez Moreno* (Gen AI OPS Input)
   - Duration: 4 hours
   - Audience: Advanced partners planning production deployments
+  - **Pillars**: GenAIOps (deep), Solution Optimization (scaling)
   - Topics:
     - CI/CD pipelines for AI applications
     - Lifecycle management and versioning
@@ -384,6 +399,31 @@
 
 ---
 
+## 🔒 Internal Resources (MSFT Only - Do Not Share Externally)
+
+> **⚠️ These resources are for internal Microsoft team alignment only. Do not redistribute or link in partner-facing materials.**
+
+| Resource | What It Provides | How We Use It |
+|----------|------------------|---------------|
+| [AI Production Readiness Assessment Guide](https://eng.ms/docs/microsoft-customer-partner-solutions-mcaps/customer-experience-and-support/asd-management/og-management/ppe-resource-center-repos/azure-engagement-resource-center/sp02/01-aiapps/assess-prod-deliveryguide) | 3-phase delivery framework, CSA checklists, scoping templates, implementation plan guidance | Aligns our workshop structure to field delivery methodology |
+| Enterprise GenAI Assessment | Gap analysis framework for production readiness | Informs Workshop 3 content and partner checklists |
+| VAS Implementation Plan Template | Post-engagement deliverable structure | Adapt for partner implementation guidance |
+
+### 6 Pillars of Production Readiness (Internal Framework)
+
+Our workshops align to the internal "6 Pillars" enablement framework:
+
+| Pillar | Internal Enablement Topic | Our Workshop Coverage |
+|--------|---------------------------|----------------------|
+| **1. AI CoE** | Establishing an AI Center of Excellence | Workshop 1: Context setting, governance intro |
+| **2. AI Landing Zones** | Platform readiness, architecture patterns | Workshop 1 (deep) + Workshop 2 (hands-on) |
+| **3. Solution Optimization** | Cost, performance, scalability | Workshop 2: Configuration best practices |
+| **4. GenAIOps** | Monitoring, CI/CD, observability | Workshop 3: Full coverage (Ana's input) |
+| **5. Responsible AI** | Fairness, transparency, safety | Workshop 1: Governance section (Devanshi's area) |
+| **6. GitHub Copilot** | Developer productivity | Out of scope (different initiative) |
+
+---
+
 ## 📚 Official Resources We Reference (Don't Recreate)
 
 ### 🎓 MS Learn Training (Recommended for All Partners)
@@ -399,13 +439,23 @@
 
 | Resource | What It Covers | We Add |
 |----------|---------------|--------|
+| [**Enterprise-Scale (ALZ)**](https://github.com/Azure/Enterprise-Scale) | Platform Landing Zone reference implementation, network topology, policies, governance | Context for "with platform LZ" architecture |
+| [Enterprise-Scale Wiki](https://github.com/Azure/Enterprise-Scale/wiki) | Detailed guidance on all CAF design areas including networking | Partner should reference for network topology questions |
 | [AI-Landing-Zones Design Checklist](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md) | 40+ recommendations across Networking, Identity, Security, Compute, Data, Monitoring, Governance, Cost, Reliability | Partner navigation + scenario mapping |
 | [AI-Landing-Zones Architecture Diagrams](https://github.com/Azure/AI-Landing-Zones) | With/without Platform LZ variants, Bicep & Terraform implementations | When to use which pattern |
 | [Deploy-Your-AI-App Required Roles](https://github.com/microsoft/Deploy-Your-AI-Application-In-Production/blob/main/docs/roles-scopes.md) | IAM requirements for deployment | Partner-specific permission scenarios |
 | [Deploy-Your-AI-App Security Guidelines](https://github.com/microsoft/Deploy-Your-AI-Application-In-Production/blob/main/SECURITY.md) | Security best practices | Hands-on workshop exercises |
 | [azd Parameter Guide](https://github.com/microsoft/Deploy-Your-AI-Application-In-Production/blob/main/docs/ParameterGuide.md) | All deployment parameters | Common partner configurations |
 
+### CAF Network Topology (Don't Recreate!)
+
+| Resource | When to Use |
+|----------|-------------|
+| [Define Azure Network Topology](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology) | Hub-spoke vs Virtual WAN decision |
+| [Network Topology & Connectivity Design Area](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) | Comprehensive connectivity guidance |
+| [Private Link and DNS Integration at Scale](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale) | Private endpoint DNS configuration |
+
 ---
 
-**Last Updated**: January 30, 2026  
-**Next Review**: February 5, 2026
+**Last Updated**: February 4, 2026  
+**Next Review**: February 11, 2026

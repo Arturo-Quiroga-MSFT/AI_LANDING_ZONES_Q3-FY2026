@@ -52,6 +52,18 @@ Before diving into details, understand the big picture:
 |------------|---------|-------------|
 | [Azure/AI-Landing-Zones](https://github.com/Azure/AI-Landing-Zones) | Reference architecture, IaC templates (Bicep/Terraform), design guidance | Foundation for any AI Landing Zone deployment |
 | [Deploy-Your-AI-Application-In-Production](https://github.com/microsoft/Deploy-Your-AI-Application-In-Production) | Complete production deployment with Fabric, Purview, AI Foundry | When customer needs end-to-end solution with data governance |
+| [Azure/Enterprise-Scale](https://github.com/Azure/Enterprise-Scale) | Platform Landing Zone reference implementation, network topology, governance policies | **For "with platform LZ" deployments** - network, identity, and connectivity design |
+
+### Platform Landing Zone Resources (Network Topology)
+
+> **📌 Don't recreate network topology guidance!** The Enterprise-Scale team maintains comprehensive documentation.
+
+| Resource | What It Covers |
+|----------|----------------|
+| [Enterprise-Scale Wiki](https://github.com/Azure/Enterprise-Scale/wiki) | All CAF design areas with implementation guidance |
+| [Define Azure Network Topology](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/define-an-azure-network-topology) | Hub-spoke vs Virtual WAN decision tree |
+| [Network Topology & Connectivity](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) | Comprehensive connectivity design area |
+| [Private Link and DNS at Scale](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale) | Private endpoint DNS integration patterns |
 
 ### Key Documents Quick Links
 
@@ -315,9 +327,10 @@ The AI Landing Zone follows:
 ---
 
 **Next Steps**:
-1. Review the [IaC Decision Framework](./IAC-DECISION-FRAMEWORK.md) to choose your deployment approach
-2. Complete [Workshop 1: Landing Zone Fundamentals](../workshops/01-landing-zone-fundamentals/) for hands-on learning
-3. Use the Design Checklist with your customer
+1. Review the [Partner Engagement Methodology](./PARTNER-ENGAGEMENT-METHODOLOGY.md) for the 3-phase delivery framework
+2. Review the [IaC Decision Framework](./IAC-DECISION-FRAMEWORK.md) to choose your deployment approach
+3. Complete [Workshop 1: Landing Zone Fundamentals](../workshops/01-landing-zone-fundamentals/) for hands-on learning
+4. Use the Design Checklist with your customer
 
 ---
 

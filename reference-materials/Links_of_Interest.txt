@@ -13,7 +13,7 @@ https://github.com/microsoft/Deploy-Your-AI-Application-In-Production?tab=readme
 
 https://techcommunity.microsoft.com/blog/azurearchitectureblog/accelerating-enterprise-ai-adoption-with-azure-ai-landing-zone/4460199
 
-
+https://github.com/Azure/Enterprise-Scale
 
 
 

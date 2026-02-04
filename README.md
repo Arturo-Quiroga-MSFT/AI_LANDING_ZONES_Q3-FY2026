@@ -17,6 +17,7 @@ This repository contains comprehensive guidance, workshops, and reference archit
 ### Partner Enablement Guides (Available Now)
 - **[Partner Quick Reference Guide](docs/PARTNER-QUICK-REFERENCE.md)**: Curated navigation through official AI Landing Zone resources
 - **[IaC Decision Framework](docs/IAC-DECISION-FRAMEWORK.md)**: Guidance for choosing between azd, Bicep, Terraform, or Portal deployments
+- **[Partner Engagement Methodology](docs/PARTNER-ENGAGEMENT-METHODOLOGY.md)**: 3-phase delivery framework for customer engagements
 - **[Deliverables Roadmap](docs/DELIVERABLES-ROADMAP.md)**: Project plan with task ownership and milestones
 
 ### Workshops
@@ -35,6 +36,7 @@ This repository contains comprehensive guidance, workshops, and reference archit
 ├── docs/                   # Partner enablement guides and documentation
 │   ├── PARTNER-QUICK-REFERENCE.md   # Start here for navigation
 │   ├── IAC-DECISION-FRAMEWORK.md    # IaC selection guidance
+│   ├── PARTNER-ENGAGEMENT-METHODOLOGY.md  # 3-phase delivery framework
 │   ├── DELIVERABLES-ROADMAP.md      # Project plan and tasks
 │   └── TEAM-COORDINATION.md         # Collaboration guide
 ├── workshops/              # Hands-on lab guides and exercises
