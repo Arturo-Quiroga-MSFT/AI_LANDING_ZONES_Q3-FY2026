@@ -24,15 +24,17 @@ Partner enablement workshops for deploying and operating production-ready Gen AI
 
 ---
 
-### Workshop 2: Deploying Your First Gen AI Workload
+### Workshop 2: From RAG to Agents — Deploying Your First Gen AI Workload
 **Duration**: 3-4 hours (hands-on)  
 **Level**: 300 (Advanced)  
 **Audience**: Technical partners with Azure experience
 
 **Learning Objectives:**
-- Deploy Landing Zone infrastructure using IaC
+- Deploy Landing Zone infrastructure using `azd up`
 - Configure Azure AI Foundry Service and connections
-- Deploy and test a sample chat application with RAG
+- Deploy and test a sample RAG chat application
+- Distinguish RAG vs. AI agents and when to graduate
+- Explore Microsoft Foundry agent capabilities
 - Implement basic monitoring and observability
 
 **Prerequisites:**
@@ -126,11 +128,11 @@ Contact: Jason Virtue (Landing Zones) or Arturo Quiroga (Workshop Development)
 
 | Workshop | Status | Last Updated | Next Review |
 |----------|--------|--------------|-------------|
-| Workshop 1: Fundamentals | 📋 Planned | - | Feb 14, 2026 |
-| Workshop 2: First Workload | 📋 Planned | - | Feb 21, 2026 |
+| Workshop 1: Fundamentals | � Draft | Feb 25, 2026 | Mar 7, 2026 |
+| Workshop 2: First Workload | 🚧 Draft | Feb 25, 2026 | Mar 7, 2026 |
 | Workshop 3: Production | 📋 Planned | - | Feb 28, 2026 |
 
 ---
 
 **Program**: AI Center of Excellence V2  
-**Last Updated**: January 29, 2026
+**Last Updated**: February 25, 2026

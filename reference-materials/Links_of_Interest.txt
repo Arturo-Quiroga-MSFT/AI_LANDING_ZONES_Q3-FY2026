@@ -15,6 +15,9 @@ https://techcommunity.microsoft.com/blog/azurearchitectureblog/accelerating-ente
 
 https://github.com/Azure/Enterprise-Scale
 
+# CAF - AI Agents guidance (Cloud Adoption Framework)
+https://learn.microsoft.com/en-ca/azure/cloud-adoption-framework/ai-agents/
+
 
 
 

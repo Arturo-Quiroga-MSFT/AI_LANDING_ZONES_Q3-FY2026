@@ -2,7 +2,7 @@
 
 **Purpose**: Curated navigation through official Microsoft AI Landing Zone resources for partners.  
 **Audience**: SI and SDC partners, solution architects, and technical consultants  
-**Last Updated**: January 29, 2026
+**Last Updated**: February 25, 2026
 
 ---
 
@@ -27,6 +27,7 @@
 - [Platform vs Application Landing Zones](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#platform-landing-zone-vs-application-landing-zones) - Key distinction
 - [AI in Azure Landing Zones](https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/#ai-in-azure-landing-zones) - Official positioning
 - [Baseline Foundry in Landing Zone](https://learn.microsoft.com/azure/architecture/ai-ml/architecture/baseline-microsoft-foundry-landing-zone) - Detailed reference architecture
+- [**CAF AI Agent Adoption**](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/) - Plan, govern, build, and manage AI agents (**NEW**)
 
 ---
 
@@ -40,8 +41,7 @@ Before diving into details, understand the big picture:
 | See the reference architecture | [Architecture Diagrams](#-reference-architectures) |
 | Check design recommendations | [Design Checklist](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md) |
 | Deploy quickly | [Deploy Your AI App In Production](https://github.com/microsoft/Deploy-Your-AI-Application-In-Production) |
-| Learn what's new | [What's New](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Whats-New.md) |
-
+| Learn what's new | [What's New](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Whats-New.md) || **Plan AI Agent workloads on your LZ** | [**CAF AI Agent Adoption**](#-ai-agent-adoption-guidance-caf) |
 ---
 
 ## 📚 Official Resource Map
@@ -258,6 +258,60 @@ azd up
 
 ---
 
+## 🤖 AI Agent Adoption Guidance (CAF)
+
+> **📌 Key Insight for Partners**: AI Landing Zones provide the *infrastructure*. The [CAF AI Agent Adoption](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/) guidance covers *what to build on that infrastructure* and how to adopt it. Together they complete the partner conversation: **build the Landing Zone → deploy and govern AI agents on it.**
+
+Microsoft's official AI agent adoption framework follows **4 phases**:
+
+| Phase | What It Covers | Key Partner Value |
+|-------|----------------|-------------------|
+| **1. Plan for Agents** | Business plan, technology plan, org readiness, data architecture | Helps partners qualify customer use cases *before* deploying infrastructure |
+| **2. Govern & Secure Agents** | Responsible AI, governance & security, prepare environment | Extends Landing Zone security (S-R1-5, G-R1-5) with agent-specific controls |
+| **3. Build Agents** | Single vs. multi-agent systems, build process | Architecture decisions for what runs on the Landing Zone |
+| **4. Manage Agents** | Integration, operations | Connects to GenAIOps (Workshop 3 territory) |
+
+### Agent Decision Tree
+
+Microsoft provides an [AI agent decision tree](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/business-strategy-plan#when-not-to-use-ai-agents) that helps partners determine:
+1. **Should the customer use agents at all?** (vs. deterministic code or classic RAG)
+2. **SaaS or custom build?** (M365 Copilot agents, Dynamics 365 agents vs. Foundry/Copilot Studio)
+3. **Single or multi-agent?** (based on security boundaries, team structure, future growth)
+
+> **💡 Partner Tip**: Use this decision tree in discovery conversations. If a customer just needs document Q&A, a classic RAG app (no agent) is simpler, cheaper, and more predictable. Reserve agents for scenarios that require multi-step reasoning, tool orchestration, or adaptive behavior.
+
+### Three Agent Types (Increasing Complexity)
+
+| Agent Type | What It Does | Example Use Case | Landing Zone Implications |
+|------------|-------------|-----------------|---------------------------|
+| **Productivity Agents** | Retrieve and synthesize information | Internal knowledge management, customer service support | Standard RAG infrastructure (AI Search, Foundry, Cosmos DB) |
+| **Action Agents** | Perform specific tasks within workflows | Service ticket creation, system monitoring, data updates | +Action tools, API integrations, Logic Apps / Functions |
+| **Automation Agents** | Multi-step processes with minimal oversight | Supply chain optimization, complex approval workflows | +Triggers, orchestration, rigorous governance & testing |
+
+### Technology Build Options
+
+| Platform | Type | Best For |
+|----------|------|----------|
+| **SaaS Agents** (M365 Copilot, Dynamics, Security Copilot) | Ready-to-use | Immediate value, standard business functions |
+| **Microsoft Foundry** | PaaS (pro-code & low/no-code) | Custom agents on AI Landing Zone, deep integration |
+| **Microsoft Copilot Studio** | SaaS (low/no-code) | Fast development, business teams, moderate customization |
+| **GPUs & Containers** (AKS, Container Apps) | IaaS/PaaS | Custom model hosting, compliance-sensitive workloads |
+
+> **📌 Foundry Setup Note**: Microsoft Foundry offers a *basic setup* (rapid prototyping, no network isolation) and a *standard setup* (enterprise data controls, private networking). The **standard setup with private networking** maps directly to the AI Landing Zone architecture. See [Foundry environment setup](https://learn.microsoft.com/azure/ai-foundry/agents/environment-setup).
+
+### Key CAF AI Agent Resources
+
+| Resource | Link |
+|----------|------|
+| AI Agent Adoption (overview) | [View](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/) |
+| Business Plan for AI Agents | [View](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/business-strategy-plan) |
+| Technology Plan for AI Agents | [View](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/technology-solutions-plan-strategy) |
+| Single Agent vs. Multiple Agents | [View](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/single-agent-multiple-agents) |
+| Process to Build AI Agents | [View](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/build-secure-process) |
+| Agent Design Patterns (Azure Architecture Center) | [View](https://learn.microsoft.com/azure/architecture/ai-ml/guide/ai-agent-design-patterns) |
+
+---
+
 ## 🔗 Framework Alignment
 
 ### Cloud Adoption Framework (CAF)
@@ -267,6 +321,7 @@ The AI Landing Zone aligns with:
 - [AI Checklist](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/ai/#ai-checklists)
 - [AI Strategy Guidance](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/ai/strategy)
 - [AI on Azure Platforms (PaaS)](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/ai/platform/architectures)
+- [**CAF AI Agent Adoption**](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/) - Plan, govern, build, and manage AI agents
 
 ### Well-Architected Framework (WAF)
 

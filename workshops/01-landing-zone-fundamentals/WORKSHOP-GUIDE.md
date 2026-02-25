@@ -123,19 +123,52 @@ the Azure architecture team."
 cloud adoption story your customers are likely already familiar with."
 ```
 
-#### Use Cases (5 min)
+#### Use Cases & AI Agent Types (8 min)
 
 **Talking Points**:
-- Chat applications with RAG
-- AI Agents
-- Document processing
-- Code modernization
-- Content generation
+- Landing Zones support two categories of AI workloads:
+  1. **Classic RAG** (deterministic retrieval): Chat, document Q&A, knowledge mining
+  2. **AI Agents** (adaptive reasoning): Multi-step reasoning, tool orchestration
+- Microsoft's CAF identifies 3 agent types (Productivity → Action → Automation)
+- Not every workload needs an agent — use the decision tree to qualify
+
+**Show**: Agent spectrum diagram and decision tree from slide deck
 
 ```
-"The architecture is flexible enough to support multiple patterns. 
-You don't need separate landing zones for different use cases—one 
-foundation supports many workloads."
+"This is a really important distinction for your partner conversations. 
+If a customer just needs document Q&A or a FAQ bot, a classic RAG 
+application is simpler, cheaper, and more predictable. Reserve agents 
+for scenarios that genuinely require multi-step reasoning or dynamic 
+tool orchestration.
+
+Microsoft's Cloud Adoption Framework now includes specific guidance 
+on AI agent adoption—when to use them, how to plan, and what to build. 
+We'll reference this throughout the workshop."
+```
+
+**Show**: [CAF AI Agent Adoption](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/)
+
+```
+"Notice how the CAF agent guidance maps to what we're covering today:
+- 'Plan for agents' helps qualify use cases—before you deploy infrastructure
+- 'Govern & secure' extends our security and governance checklist items
+- 'Build agents' is about what runs ON the Landing Zone you'll deploy
+- 'Manage agents' connects to GenAIOps—that's Workshop 3 territory"
+```
+
+#### Agent Architecture — 5 Components (5 min)
+
+**Talking Points**:
+- Every AI agent has 5 building blocks: Model, Instructions, Retrieval, Actions, Memory
+- The Landing Zone directly supports Retrieval (AI Search, Cosmos DB) and Actions (APIs, Functions, Logic Apps)
+- Understanding these components helps partners scope infrastructure needs correctly
+
+```
+"When we look at the reference architecture in Module 2, you'll see 
+how each Landing Zone component maps to these agent building blocks. 
+AI Search provides the retrieval layer. Cosmos DB provides the memory. 
+Container Apps and Functions host the actions. This is why the Landing 
+Zone architecture looks the way it does."
 ```
 
 #### Check for Understanding
@@ -145,7 +178,14 @@ AI Landing Zone different from just deploying Azure AI services
 directly?
 
 [Desired answer: It's a pre-built foundation with security, 
-networking, governance built in—not starting from scratch]"
+networking, governance built in—not starting from scratch]
+
+Bonus question: When would you recommend a classic RAG app 
+versus an AI agent to a customer?
+
+[Desired answer: RAG for predictable Q&A from fixed data; 
+agents when the task requires reasoning, tool use, or multi-step 
+decision-making]"
 ```
 
 ---
@@ -520,6 +560,51 @@ Questions to ask:
 - 'What's essential vs nice-to-have?'"
 ```
 
+#### Scenario 5: Customer Building AI Agents (5 min)
+
+```
+"Customer: Moving beyond simple chat or RAG — wants to build AI agents
+that reason, take actions, and orchestrate multi-step workflows.
+
+This is increasingly common, and it's where the CAF AI Agent Adoption
+framework becomes essential. Let me walk through the key questions.
+
+First question: Does the customer actually need an agent?
+Remember our decision tree from Module 1:
+- If the task is structured and predictable → deterministic code
+- If it's static knowledge retrieval → classic RAG
+- Only if it requires reasoning, tool orchestration, or adaptive
+  behavior → then an agent is justified
+
+Second question: What type of agent?
+- Productivity agent (retrieval/synthesis) → standard LZ components
+- Action agent (performs tasks via APIs) → add Logic Apps, Functions, APIM
+- Automation agent (multi-step, minimal oversight) → add orchestration,
+  triggers, rigorous governance, human-in-the-loop checkpoints
+
+Third question: Single or multi-agent?
+Use multi-agent only when:
+- Crossing security/compliance boundaries
+- Multiple teams own separate domains
+- Known future growth across business units
+Otherwise, start with single agent and validate.
+
+Fourth question: SaaS or custom build?
+Check if M365 Copilot agents, Dynamics 365 agents, or Security Copilot
+agents already cover the use case. Only build custom when SaaS falls short.
+If building custom: Microsoft Foundry (standard setup with private
+networking) maps directly to the AI Landing Zone architecture."
+```
+
+**Show**: [CAF AI Agent Adoption](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/) and [AI Agent Decision Tree](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/business-strategy-plan#when-not-to-use-ai-agents)
+
+```
+"The key takeaway: the Landing Zone you deploy is the same foundation.
+The difference is what you build on top. Agents just require more
+thought around governance, testing (because they're nondeterministic),
+and operational monitoring."
+```
+
 ---
 
 ### Wrap-up (2:45 - 3:00)
@@ -530,13 +615,17 @@ Questions to ask:
 "Let's recap what we covered today:
 
 1. AI Landing Zone is a production-ready foundation for Gen AI workloads
-2. Two architecture options: with or without Platform Landing Zone
-3. Design Checklist is your primary customer engagement tool
-4. Four deployment paths: azd, Bicep, Terraform, Portal
-5. Match your approach to customer context
+2. It supports both classic RAG and AI agent workloads
+3. Two architecture options: with or without Platform Landing Zone
+4. Design Checklist is your primary customer engagement tool
+5. Four deployment paths: azd, Bicep, Terraform, Portal
+6. Five engagement scenarios — including AI agents
 
 The common thread: don't reinvent the wheel. Microsoft has done 
-the hard work—your job is to apply it to customer situations."
+the hard work—your job is to apply it to customer situations.
+
+And remember: not every customer needs agents. Use the decision tree
+to qualify the right workload type before deploying infrastructure."
 ```
 
 #### Next Steps (3 min)
@@ -546,11 +635,13 @@ the hard work—your job is to apply it to customer situations."
 
 1. PRACTICE: Deploy a test environment using azd up
 2. READ: Go through the Design Checklist in detail
-3. APPLY: Use the Quick Reference Guide with your next customer
-4. CONTINUE: Join Workshop 2 for hands-on deployment
+3. EXPLORE: Review the CAF AI Agent Adoption guidance — it's the
+   official Microsoft framework for what runs ON your Landing Zone
+4. APPLY: Use the Quick Reference Guide with your next customer
+5. CONTINUE: Join Workshop 2 for hands-on deployment
 
-Workshop 2 is where we actually deploy and configure a full 
-Gen AI workload. That's the hands-on practice."
+Workshop 2 is where we actually deploy a full Gen AI workload, starting
+with RAG and exploring when and how to graduate to agents."
 ```
 
 #### Q&A (5 min)
@@ -644,6 +735,6 @@ Send within 48 hours with:
 
 ---
 
-**Workshop Owner**: Anahita Afshari (PSA)  
-**Last Updated**: January 29, 2026  
+**Workshop Owners**: Anahita Afshari (PSA) & Arturo Quiroga (PSA)  
+**Last Updated**: February 25, 2026  
 **Status**: 🚧 Draft - Ready for Review

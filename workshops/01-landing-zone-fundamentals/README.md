@@ -3,6 +3,7 @@
 **Duration**: 2-3 hours  
 **Level**: 200 (Intermediate)  
 **Lead**: Anahita Afshari (PSA)  
+**Co-Lead**: Arturo Quiroga (PSA)  
 **Reviewer**: Arturo Quiroga (PSA)
 
 ---
@@ -212,7 +213,7 @@ After the workshop, collect feedback using:
 ## 🔗 Related Resources
 
 ### Next Workshops
-- [Workshop 2: Deploying Your First Gen AI Workload](../02-first-genai-workload/)
+- [Workshop 2: From RAG to Agents — Deploying Your First Gen AI Workload](../02-first-genai-workload/)
 - [Workshop 3: Landing Zones to Production](../03-production-readiness/)
 
 ### Documentation
@@ -228,6 +229,6 @@ After the workshop, collect feedback using:
 
 ---
 
-**Workshop Owner**: Anahita Afshari (PSA)  
-**Last Updated**: January 29, 2026  
+**Workshop Owners**: Anahita Afshari (PSA) & Arturo Quiroga (PSA)  
+**Last Updated**: February 25, 2026  
 **Status**: 🚧 Draft - In Development

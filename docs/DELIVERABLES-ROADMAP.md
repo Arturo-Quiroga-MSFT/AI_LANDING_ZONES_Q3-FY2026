@@ -117,15 +117,19 @@
     - Identity and access management
     - Cost estimation and governance
   
-- [ ] **Workshop 2: Deploying Your First Gen AI Workload** 👤 *Arturo* (Lead) + *Anahita* (Review)
+- [ ] **Workshop 2: From RAG to Agents — Deploying Your First Gen AI Workload** 👤 *Arturo* (Lead) + *Anahita* (Review)
   - Duration: 3-4 hours (hands-on)
   - Audience: Technical partners with Azure experience
   - **Pillars**: AI Landing Zones (hands-on), Solution Optimization
+  - **Narrative arc**: Start with RAG (baseline), understand when to graduate to agents
   - Topics:
     - Deploy foundational Landing Zone infrastructure
-    - Configure AI Foundry Service and connections
+    - Configure AI Foundry Service with standard (private networking) setup
     - Deploy sample chat application with RAG
+    - Understand RAG vs. Agent distinction in practice
+    - Explore Microsoft Foundry agent capabilities (declarative & hosted agents)
     - Implement monitoring and observability
+  - **CAF AI Agents references**: [Technology Plan](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/technology-solutions-plan-strategy) | [Build Process](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/build-secure-process)
 
 - [ ] **Workshop 3: Landing Zones to Production (Gen AI OPS Bridge)** 👤 *Arturo* (Lead) + *Ana Lopez Moreno* (Gen AI OPS Input)
   - Duration: 4 hours
