@@ -2,7 +2,7 @@
 
 **Purpose**: Help partners choose the right IaC approach for AI Landing Zone deployments  
 **Audience**: Solution architects, DevOps engineers, technical consultants  
-**Last Updated**: January 29, 2026
+**Last Updated**: February 25, 2026
 
 ---
 
@@ -317,6 +317,71 @@ terraform/
 2. Convert ARM to Bicep using `az bicep decompile`
 3. Optimize and modularize the Bicep
 4. Or convert ARM to Terraform using third-party tools
+
+---
+
+## 🤖 Foundry Agent Environment Setup Options
+
+When deploying AI agent workloads on the Landing Zone, partners must choose the right **Microsoft Foundry setup type**. This decision directly maps to the infrastructure deployed via the IaC options above.
+
+> **Source**: [Foundry Agent Environment Setup](https://learn.microsoft.com/azure/ai-foundry/agents/environment-setup) | [CAF Technology Plan](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/technology-solutions-plan-strategy)
+
+### Setup Comparison
+
+| Factor | Basic Setup | Standard Setup |
+|--------|-------------|----------------|
+| **Network Isolation** | None (public endpoints) | Private networking (VNet + Private Endpoints) |
+| **Use Case** | Rapid prototyping, PoCs, learning | Production, enterprise, regulated |
+| **Data Residency** | Standard Azure region | Full network control, no public egress |
+| **Maps to IaC** | azd up (default params) | Bicep/Terraform with full networking modules |
+| **Maps to Landing Zone** | Without Platform LZ (minimal) | **With or Without Platform LZ (full security)** |
+| **Managed Identity** | Optional | Required |
+| **Key Vault Integration** | Optional | Required |
+| **Defender for Cloud** | Recommended | Required |
+
+### Decision Guidance
+
+```
+┌─────────────────────────────────────────────────────┐
+│          FOUNDRY SETUP DECISION                     │
+└─────────────────────────────────────────────────────┘
+                      │
+           Is this production or
+           handling sensitive data?
+                      │
+          ┌───────────┴───────────┐
+          │                       │
+         YES                     NO
+          │                       │
+          ▼                       ▼
+  ┌───────────────┐      ┌───────────────┐
+  │   Standard    │      │    Basic      │
+  │   Setup       │      │    Setup      │
+  │               │      │               │
+  │ = AI Landing  │      │ Quick start,  │
+  │   Zone arch   │      │ upgrade later │
+  └───────────────┘      └───────────────┘
+```
+
+### What Standard Setup Requires (Your Landing Zone Provides)
+
+| Foundry Standard Requirement | Landing Zone Component | IaC Module |
+|-----------------------------|----------------------|------------|
+| Private networking | VNet + Subnets + NSGs | `modules/networking/` |
+| Private Endpoints | PE for all PaaS services | `modules/networking/` |
+| Managed Identity | System/User-assigned MI | `modules/security/` |
+| AI Search connection | AI Search with private EP | `modules/ai-services/` |
+| Cosmos DB for memory | Cosmos DB with private EP | `modules/compute/` |
+| Key Vault for secrets | Key Vault with private EP | `modules/security/` |
+| Diagnostic settings | Log Analytics + App Insights | `modules/monitoring/` |
+
+**Key partner talking point**: *"When you deploy the AI Landing Zone, you're deploying Foundry's standard enterprise setup. There's no separate infrastructure step for agents — the Landing Zone IS the agent-ready environment."*
+
+### Mapping to IaC Options
+
+- **azd up**: Deploys Standard-equivalent infrastructure by default (private endpoints, managed identity). Best for demos and PoCs.
+- **Bicep**: Full control over Foundry standard setup. Use `modules/ai-services/` to customize AI Foundry hub/project configuration. Best for Azure-native production.
+- **Terraform**: Same Standard setup with Terraform state management. Use AVM modules for AI Foundry resources. Best for multi-cloud shops.
 
 ---
 

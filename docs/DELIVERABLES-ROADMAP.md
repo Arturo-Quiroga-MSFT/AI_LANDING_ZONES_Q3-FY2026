@@ -134,12 +134,24 @@
 - [ ] **Workshop 3: Landing Zones to Production (Gen AI OPS Bridge)** 👤 *Arturo* (Lead) + *Ana Lopez Moreno* (Gen AI OPS Input)
   - Duration: 4 hours
   - Audience: Advanced partners planning production deployments
-  - **Pillars**: GenAIOps (deep), Solution Optimization (scaling)
+  - **Pillars**: GenAIOps (deep), Solution Optimization (scaling), Agent Governance
   - Topics:
     - CI/CD pipelines for AI applications
     - Lifecycle management and versioning
     - Monitoring, logging, and alerting
     - Cost optimization and scaling strategies
+    - **Agent Governance & Security** *(CAF AI Agents integration)*:
+      - CAF Govern & Secure phase for AI agents ([reference](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/govern-secure))
+      - Data access controls and tool permission boundaries
+      - Human-in-the-loop policies and escalation frameworks
+      - Agent observability: tool call monitoring, reasoning chain tracing, drift detection
+      - Responsible AI guardrails for agent outputs
+      - Multi-agent security: credential isolation, cross-boundary trust
+    - **Agent Operations & Lifecycle** *(CAF AI Agents integration)*:
+      - CAF Manage phase for AI agents ([reference](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/manage))
+      - Agent versioning and rollback strategies
+      - Performance baselining and SLA definition for agent workloads
+      - Operational runbooks for agent-specific failure modes
 
 **Deliverables**:
 - `/workshops/01-landing-zone-fundamentals/` with slides and guides *(Anahita)*
