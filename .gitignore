@@ -72,3 +72,4 @@ npm-debug.log*
 
 # Large files now handled by Git LFS
 # (*.pptx tracked via .gitattributes)
+WALKTHROUGH-*.md
