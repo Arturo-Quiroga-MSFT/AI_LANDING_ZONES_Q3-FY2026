@@ -52,10 +52,11 @@ Partner enablement workshops for deploying and operating production-ready Gen AI
 **Audience**: Advanced partners planning production deployments
 
 **Learning Objectives:**
-- Implement CI/CD pipelines for AI applications
-- Configure comprehensive monitoring and alerting
+- Implement CI/CD pipelines for AI infrastructure and applications
+- Configure comprehensive monitoring, observability, and alerting
+- Define agent governance policies (data access, tool permissions, escalation)
 - Apply cost optimization and scaling strategies
-- Plan for lifecycle management and Day-2 operations
+- Build a production readiness checklist for AI workloads
 
 **Prerequisites:**
 - Completion of Workshop 2
@@ -128,9 +129,9 @@ Contact: Jason Virtue (Landing Zones) or Arturo Quiroga (Workshop Development)
 
 | Workshop | Status | Last Updated | Next Review |
 |----------|--------|--------------|-------------|
-| Workshop 1: Fundamentals | � Draft | Feb 25, 2026 | Mar 7, 2026 |
+| Workshop 1: Fundamentals | 🚧 Draft | Feb 25, 2026 | Mar 7, 2026 |
 | Workshop 2: First Workload | 🚧 Draft | Feb 25, 2026 | Mar 7, 2026 |
-| Workshop 3: Production | 📋 Planned | - | Feb 28, 2026 |
+| Workshop 3: Production | 📋 Scaffold | Feb 25, 2026 | Feb 28, 2026 |
 
 ---
 
