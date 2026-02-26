@@ -27,6 +27,7 @@ This repository contains comprehensive guidance, workshops, and reference archit
 
 ### Presentations
 - **[Partner Pitch Deck Outline](presentations/PARTNER-PITCH-DECK-OUTLINE.md)**: 17-20 slide business-value deck with CAF AI Agents framework
+- **CAF AI Agent Adoption — LevelUp Deck**: End-to-end walkthrough of Microsoft's Cloud Adoption Framework for AI Agent adoption (in `presentations/`)
 
 ### Architecture
 - **[Diagram References](architecture/diagrams/DIAGRAM-REFERENCES.md)**: Central index of all architecture diagrams with usage map across workshops and docs
@@ -49,7 +50,8 @@ This repository contains comprehensive guidance, workshops, and reference archit
 │   ├── 01-landing-zone-fundamentals/    # Workshop 1 (draft)
 │   └── 02-first-genai-workload/         # Workshop 2 (draft)
 ├── presentations/              # Partner-facing presentation decks
-│   └── PARTNER-PITCH-DECK-OUTLINE.md    # Business-value pitch deck
+│   ├── PARTNER-PITCH-DECK-OUTLINE.md    # Business-value pitch deck
+│   └── CAF-AI-Agent-Adoption-LevelUp-2026-02-25.pptx  # CAF AI Agents LevelUp deck
 ├── architecture/               # Architecture diagrams and design patterns
 │   └── diagrams/DIAGRAM-REFERENCES.md   # Diagram index with usage map
 ├── workbooks/                  # Excel-based assessment and planning tools

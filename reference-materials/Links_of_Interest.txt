@@ -18,6 +18,9 @@ https://github.com/Azure/Enterprise-Scale
 # CAF - AI Agents guidance (Cloud Adoption Framework)
 https://learn.microsoft.com/en-ca/azure/cloud-adoption-framework/ai-agents/
 
+# CAF AI Agent Adoption - LevelUp Presentation (Feb 25, 2026)
+# Deck: presentations/CAF-AI-Agent-Adoption-LevelUp-2026-02-25.pptx
+
 
 
 

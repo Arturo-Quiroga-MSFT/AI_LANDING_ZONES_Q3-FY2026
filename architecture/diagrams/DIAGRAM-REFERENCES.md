@@ -79,6 +79,16 @@
 - **Key visuals**: Sequential, parallel, and conditional orchestration patterns
 - **Used in**: Workshop 2 (Module 4 background), Workshop 3 (advanced topics)
 
+---
+
+## 📊 Presentation Decks
+
+### CAF AI Agent Adoption — LevelUp Deck
+- **File**: `presentations/CAF-AI-Agent-Adoption-LevelUp-2026-02-25.pptx`
+- **Content**: End-to-end CAF AI Agent adoption walkthrough
+- **Covers**: Plan → Govern & Secure → Build → Manage phases, agent taxonomy, technology options
+- **Use for**: Partner deep-dives on CAF AI Agents framework, complements the Partner Pitch Deck Outline
+
 ### Deploy-Your-AI-App Architecture
 - **Source**: [Deploy-Your-AI-Application-In-Production](https://github.com/microsoft/Deploy-Your-AI-Application-In-Production)
 - **Key visual**: Full resource topology (~30 services)
