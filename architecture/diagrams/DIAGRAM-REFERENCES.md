@@ -114,12 +114,24 @@
 
 ---
 
+## 🛠️ Diagram Generation Tool
+
+### Azure Architecture Diagram Builder
+- **Repo**: [Arturo-Quiroga-MSFT/azure-architecture-diagram-builder](https://github.com/Arturo-Quiroga-MSFT/azure-architecture-diagram-builder)
+- **What it does**: Generates professional Azure architecture diagrams using official Azure Architecture Icons
+- **Use for presenters**: Live-build diagrams during workshops, customize to partner scenarios on the fly
+- **Use for participants**: Visualize deployed architectures, create diagrams for their own customer engagements
+- **Recommended in**: Workshop 1 (Module 2 — Reference Architectures), Workshop 2 (post-deployment visualization), Partner engagements
+
+---
+
 ## 🎨 Custom Diagram Guidance
 
 When creating custom diagrams for presentations:
 - Use [Microsoft Azure Architecture Icons](https://learn.microsoft.com/azure/architecture/icons/)
+- Use the [Azure Architecture Diagram Builder](https://github.com/Arturo-Quiroga-MSFT/azure-architecture-diagram-builder) to generate diagrams programmatically
 - Follow [Microsoft brand guidelines](https://www.microsoft.com/design/fluent/) for colors
-- Tools: Visio, draw.io, PowerPoint, or Excalidraw
+- Tools: Diagram Builder (recommended), Visio, draw.io, PowerPoint, or Excalidraw
 - Export as both PNG (for slides) and SVG (for docs)
 - Store custom diagrams in this folder with descriptive names
 

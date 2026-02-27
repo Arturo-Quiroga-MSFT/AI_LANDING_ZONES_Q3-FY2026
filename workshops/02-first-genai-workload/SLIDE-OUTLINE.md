@@ -380,6 +380,7 @@ azd down
 | Deploy-Your-AI-App | github.com/microsoft/Deploy-Your-AI-Application-In-Production |
 | CAF AI Agent Adoption | learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/ |
 | AI Foundry Agent Quickstart | learn.microsoft.com/azure/ai-foundry/agents/quickstart |
+| **Azure Architecture Diagram Builder** | github.com/Arturo-Quiroga-MSFT/azure-architecture-diagram-builder |
 | Design Checklist | (link) |
 | Partner Quick Reference | (internal) |
 

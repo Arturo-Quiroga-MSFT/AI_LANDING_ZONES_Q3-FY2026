@@ -53,6 +53,7 @@ Before diving into details, understand the big picture:
 | [Azure/AI-Landing-Zones](https://github.com/Azure/AI-Landing-Zones) | Reference architecture, IaC templates (Bicep/Terraform), design guidance | Foundation for any AI Landing Zone deployment |
 | [Deploy-Your-AI-Application-In-Production](https://github.com/microsoft/Deploy-Your-AI-Application-In-Production) | Complete production deployment with Fabric, Purview, AI Foundry | When customer needs end-to-end solution with data governance |
 | [Azure/Enterprise-Scale](https://github.com/Azure/Enterprise-Scale) | Platform Landing Zone reference implementation, network topology, governance policies | **For "with platform LZ" deployments** - network, identity, and connectivity design |
+| [Azure Architecture Diagram Builder](https://github.com/Arturo-Quiroga-MSFT/azure-architecture-diagram-builder) | Generate Azure architecture diagrams using official icons | Visualize Landing Zone architectures, customize diagrams for customer proposals |
 
 ### Platform Landing Zone Resources (Network Topology)
 

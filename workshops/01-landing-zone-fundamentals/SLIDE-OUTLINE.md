@@ -423,6 +423,7 @@ Key questions:
 | AI Landing Zones Repo | github.com/Azure/AI-Landing-Zones |
 | Deploy-Your-AI-App | github.com/microsoft/Deploy-Your-AI-Application-In-Production |
 | **CAF AI Agent Adoption** | learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/ |
+| **Azure Architecture Diagram Builder** | github.com/Arturo-Quiroga-MSFT/azure-architecture-diagram-builder |
 | Design Checklist | (link) |
 | Partner Quick Reference | (internal) |
 | IaC Decision Framework | (internal) |

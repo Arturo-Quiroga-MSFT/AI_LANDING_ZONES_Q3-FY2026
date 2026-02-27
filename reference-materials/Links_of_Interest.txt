@@ -21,6 +21,9 @@ https://learn.microsoft.com/en-ca/azure/cloud-adoption-framework/ai-agents/
 # CAF AI Agent Adoption - LevelUp Presentation (Feb 25, 2026)
 # Deck: presentations/CAF-AI-Agent-Adoption-LevelUp-2026-02-25.pptx
 
+# Azure Architecture Diagram Builder (AQ) — generates Azure architecture diagrams using official icons
+https://github.com/Arturo-Quiroga-MSFT/azure-architecture-diagram-builder
+
 
 
 
