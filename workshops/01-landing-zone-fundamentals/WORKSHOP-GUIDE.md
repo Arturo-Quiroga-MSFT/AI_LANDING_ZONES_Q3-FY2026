@@ -11,9 +11,11 @@
 ### 1 Week Before
 - [ ] Confirm participant list and roles
 - [ ] Send pre-workshop preparation email with:
+  - [ ] Link to [Prerequisites & Pre-Work](./PREREQUISITES.md)
   - [ ] Link to [Partner Quick Reference Guide](../../docs/PARTNER-QUICK-REFERENCE.md)
   - [ ] Link to [Design Checklist](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md)
-  - [ ] Prerequisites reminder
+  - [ ] Prerequisites reminder (emphasize mandatory Microsoft Learn modules)
+  - [ ] **Cost warning**: Remind participants that deploying resources incurs significant Azure costs (Azure Firewall ~$900-1,250/month) and resources must be deleted after the workshop
 - [ ] Test all links in presentation
 - [ ] Prepare demo subscription (optional)
 
@@ -70,6 +72,13 @@ By the end of today, you'll be able to:
 - Questions are welcome anytime - raise hand or use chat
 - Materials are linked in the chat
 - [Recording notice if applicable]
+
+⚠️ COST WARNING: If you plan to deploy Azure resources during or
+after this workshop, please be aware that a full AI Landing Zone
+deployment can cost $1,500-3,500+ per month. Azure Firewall alone
+is approximately $900-1,250/month. Please delete ALL resources
+immediately after the workshop to avoid unexpected charges.
+See the Prerequisites document for a cleanup checklist.
 
 Any questions before we begin?"
 ```
@@ -433,7 +442,19 @@ In about 45 minutes, you have 30+ Azure resources deployed with:
 - AI Search
 - All networking configured
 
-Use this for PoCs, demos, or when speed matters most."
+Use this for PoCs, demos, or when speed matters most.
+
+⚠️ IMPORTANT COST WARNING: A full deployment creates 30+ resources
+that can cost $1,500-3,500 per month. Azure Firewall alone runs
+about $900-1,250/month. If you deploy for learning purposes:
+
+1. Set up Azure Cost Management budget alerts BEFORE deploying
+2. Use the 'without Platform LZ' option to avoid Firewall/Bastion costs
+3. Run 'azd down' to tear down ALL resources when you're done
+4. Verify no orphaned resources remain in your subscription
+
+Do NOT leave a full landing zone running overnight unless you
+intend to use it in production."
 ```
 
 #### Path B & C: Bicep vs Terraform (7 min)

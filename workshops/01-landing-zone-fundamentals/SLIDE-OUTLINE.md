@@ -305,6 +305,31 @@
 - Best for: PoCs, demos, fast start
 - **Link**: [Repository](https://github.com/microsoft/Deploy-Your-AI-Application-In-Production)
 
+### Slide 33a: Cost Warning — Know Before You Deploy
+
+> **⚠️ Critical: Azure Costs Can Be Significant**
+
+- **Full "with Platform LZ" deployment**: ~$1,500-3,500+/month
+- **"Without Platform LZ" deployment**: ~$300-1,200+/month
+
+**High-Cost Services to Watch**:
+
+| Service | Estimated Monthly Cost |
+|---------|----------------------|
+| Azure Firewall (Standard SKU) | $900-1,250 |
+| Azure DDoS Protection (Standard) | $2,944 |
+| Azure Bastion (Standard SKU) | $140-200 |
+| Azure AI Search (depends on tier) | $75-300+ |
+| Azure Cosmos DB (depends on throughput) | $25-500+ |
+
+**Required Actions**:
+
+- **DELETE all resources immediately after the workshop**
+- Use `azd down` to tear down `azd up` deployments
+- Set up [Azure Cost Management budget alerts](https://learn.microsoft.com/azure/cost-management-billing/costs/tutorial-acm-create-budgets) before deploying
+- Consider the "without Platform LZ" architecture for learning (avoids Firewall + Bastion costs)
+- See [Workshop Prerequisites — Cost Considerations](./PREREQUISITES.md#cost-considerations) for a full cleanup checklist
+
 ### Slide 34: Path B - Bicep
 - Repository: AI-Landing-Zones/bicep
 - Azure-native IaC
@@ -429,11 +454,12 @@ Key questions:
 | IaC Decision Framework | (internal) |
 
 ### Slide 47: Next Steps
-1. **Practice**: Deploy a test environment
-2. **Read**: Review Design Checklist in detail
-3. **Explore**: Review the [CAF AI Agent Adoption](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/) guidance
-4. **Apply**: Use with next customer engagement
-5. **Continue**: Attend Workshop 2 (hands-on deployment)
+1. **Practice**: Deploy a test environment (see cost warnings!)
+2. **⚠️ Delete resources**: Tear down any deployed resources immediately after practice
+3. **Read**: Review Design Checklist in detail
+4. **Explore**: Review the [CAF AI Agent Adoption](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/) guidance
+5. **Apply**: Use with next customer engagement
+6. **Continue**: Attend Workshop 2 (hands-on deployment)
 
 ### Slide 48: Workshop 2 Preview
 **From RAG to Agents: Deploying Your First Gen AI Workload**

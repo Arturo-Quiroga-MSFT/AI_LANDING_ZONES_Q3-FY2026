@@ -34,21 +34,40 @@ This workshop introduces partners to Azure AI Landing Zones, covering core conce
 
 ## 📚 Prerequisites
 
+> **📋 Detailed prerequisites and pre-work instructions**: [PREREQUISITES.md](./PREREQUISITES.md)
+
 ### Required Knowledge
-- Basic Azure fundamentals (compute, storage, networking)
-- Understanding of Azure subscription and resource group concepts
-- Familiarity with Azure Portal navigation
+
+* Basic Azure fundamentals (compute, storage, networking)
+* Understanding of Azure subscription and resource group concepts
+* Familiarity with Azure Portal navigation
+* Networking basics: virtual networks, subnets, DNS
+
+### Required Microsoft Learn Modules (Pre-Work)
+
+Participants **must complete** these modules before the workshop (~1 hr 30 min total):
+
+| Module | Duration |
+|--------|----------|
+| [Introduction to AI Landing Zones](https://learn.microsoft.com/training/modules/intro-ai-landing-zones/) | 28 min |
+| [Introduction to Azure Landing Zones](https://learn.microsoft.com/training/modules/intro-to-azure-landing-zones/) | 30 min |
+| [Design a Governance Strategy](https://learn.microsoft.com/training/modules/cloud-adoption-framework-govern/) | 30 min |
 
 ### Required Access
-- Azure subscription (for optional hands-on exercises)
-- GitHub access (to view official repositories)
-- Internet access for documentation references
 
-### Recommended Preparation (Pre-Work)
-- **🎓 Complete MS Learn Module** (28 min): [Introduction to AI Landing Zones](https://learn.microsoft.com/training/modules/intro-ai-landing-zones/) ⭐ *Highly Recommended*
-- **Optional** (1 hr 34 min): Full [AI Center of Excellence Learning Path](https://learn.microsoft.com/training/paths/ai-center-excellence/)
-- Review the [Partner Quick Reference Guide](../../docs/PARTNER-QUICK-REFERENCE.md)
-- Skim the [Design Checklist](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md)
+* GitHub account (to view official repositories)
+* Internet access for documentation references
+* Azure subscription with Contributor role (for optional hands-on exercises)
+
+### Recommended Preparation
+
+* Review the [Partner Quick Reference Guide](../../docs/PARTNER-QUICK-REFERENCE.md)
+* Skim the [Design Checklist](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md)
+* Browse the [AI Landing Zones GitHub README](https://github.com/Azure/AI-Landing-Zones#readme)
+
+### ⚠️ Cost Warning
+
+> **Azure costs can be significant.** A full "with Platform Landing Zone" deployment can cost **$1,500-3,500+/month** (Azure Firewall alone is ~$900-1,250/month). If you plan to deploy resources during or after the workshop, **delete all resources immediately after** to avoid unexpected charges. See [PREREQUISITES.md — Cost Considerations](./PREREQUISITES.md#cost-considerations) for details and a cleanup checklist.
 
 ---
 
@@ -56,6 +75,7 @@ This workshop introduces partners to Azure AI Landing Zones, covering core conce
 
 | Material | Description | Location |
 |----------|-------------|----------|
+| Prerequisites & Pre-Work | Required modules, access, and cost warnings | [PREREQUISITES.md](./PREREQUISITES.md) |
 | Workshop Guide | Step-by-step facilitation guide | [WORKSHOP-GUIDE.md](./WORKSHOP-GUIDE.md) |
 | Slide Deck Outline | Presentation structure | [SLIDE-OUTLINE.md](./SLIDE-OUTLINE.md) |
 | Design Checklist | Official Microsoft resource | [GitHub](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md) |
