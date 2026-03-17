@@ -50,7 +50,7 @@ Participants **must complete** these modules before the workshop (~1 hr 30 min t
 | Module | Duration |
 |--------|----------|
 | [Introduction to AI Landing Zones](https://learn.microsoft.com/training/modules/intro-ai-landing-zones/) | 28 min |
-| [Introduction to Azure Landing Zones](https://learn.microsoft.com/training/modules/intro-to-azure-landing-zones/) | 30 min |
+| [Choose the Best Azure Landing Zone](https://learn.microsoft.com/training/modules/cloud-adoption-framework-ready/) | 30 min |
 | [Design a Governance Strategy](https://learn.microsoft.com/training/modules/cloud-adoption-framework-govern/) | 30 min |
 
 ### Required Access

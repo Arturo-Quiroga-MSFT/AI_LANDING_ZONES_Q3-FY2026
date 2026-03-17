@@ -37,7 +37,7 @@ Complete these modules **before** the workshop. Total estimated time: **~1 hour 
 | # | Module | Duration | Why It Matters |
 |---|--------|----------|----------------|
 | 1 | [Introduction to AI Landing Zones](https://learn.microsoft.com/training/modules/intro-ai-landing-zones/) | 28 min | Core foundation — covers what AI Landing Zones are, why they exist, and how they fit into CAF. This is the single most important pre-read. |
-| 2 | [Introduction to Azure Landing Zones](https://learn.microsoft.com/training/modules/intro-to-azure-landing-zones/) | 30 min | Establishes the platform vs. application landing zone distinction that Workshop 1 builds on. |
+| 2 | [Choose the Best Azure Landing Zone](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/) | 30 min | Establishes the platform vs. application landing zone distinction that Workshop 1 builds on. |
 | 3 | [Design a Governance Strategy](https://learn.microsoft.com/training/modules/cloud-adoption-framework-govern/) | 30 min | Provides context for the governance and policy recommendations in the Design Checklist walkthrough. |
 
 ### Recommended Modules (Strongly Encouraged)
@@ -57,8 +57,7 @@ For participants who want to go further or have specific interest areas.
 | # | Module | Duration | Topic |
 |---|--------|----------|-------|
 | 7 | [Manage Azure Landing Zones with Terraform](https://learn.microsoft.com/training/modules/manage-azure-landing-zone-terraform/) | 45 min | IaC with Terraform for landing zones |
-| 8 | [What is Azure AI Search?](https://learn.microsoft.com/training/modules/intro-to-azure-search/) | 25 min | RAG retrieval layer fundamentals |
-| 9 | [Plan AI agent workloads (CAF)](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/business-strategy-plan) | 15 min read | When to use AI agents vs. classic RAG |
+| 8 | [Plan AI agent workloads (CAF)](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/business-strategy-plan) | 15 min read | When to use AI agents vs. classic RAG |
 
 ## Required Access and Tooling
 
