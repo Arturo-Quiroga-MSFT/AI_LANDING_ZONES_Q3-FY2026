@@ -21,6 +21,8 @@ from pptx import Presentation
 from pptx.util import Inches, Pt, Emu
 from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
+from pptx.opc.package import Part
+from pptx.opc.packuri import PackURI
 
 
 # ──────────────────────────────────────────────────────────────────────
@@ -463,11 +465,148 @@ WHITE = RGBColor(0xFF, 0xFF, 0xFF)
 LIGHT_GRAY = RGBColor(0xF2, 0xF2, 0xF2)
 DARK_GRAY = RGBColor(0x33, 0x33, 0x33)
 
+# Namespace for relationship attributes in OOXML
+NS_R = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+
+# Global counter for unique media part names across all copied slides
+_img_counter = 0
+
+
+def _get_blank_layout(prs):
+    """Find a blank slide layout (fewest placeholders)."""
+    best = prs.slide_layouts[0]
+    best_count = len(list(best.placeholders))
+    for layout in prs.slide_layouts:
+        count = len(list(layout.placeholders))
+        if count < best_count:
+            best = layout
+            best_count = count
+        if count == 0:
+            return layout
+    return best
+
+
+def copy_slide(source_prs, slide_index, target_prs):
+    """
+    Copy a slide from source presentation to target presentation.
+
+    Properly handles image/media relationships by:
+    1. Creating new Part objects for each media blob in the target package
+    2. Adding relationships from the new slide to those parts
+    3. Remapping rId references in shape XML to the new rIds
+    """
+    global _img_counter
+
+    src_slide = source_prs.slides[slide_index]
+    src_part = src_slide.part
+
+    # Add blank slide to target
+    layout = _get_blank_layout(target_prs)
+    new_slide = target_prs.slides.add_slide(layout)
+    new_part = new_slide.part
+
+    # Remove any default placeholder shapes from the blank layout
+    sp_tree = new_slide.shapes._spTree
+    removable_tags = {'sp', 'pic', 'graphicFrame', 'grpSp', 'cxnSp'}
+    for child in list(sp_tree):
+        local_tag = child.tag.split('}')[-1] if '}' in child.tag else child.tag
+        if local_tag in removable_tags:
+            sp_tree.remove(child)
+
+    # ── Phase 1: Copy relationships and build rId mapping ──
+    rId_map = {}  # source_rId -> target_rId
+
+    for src_rel in src_part.rels.values():
+        rt = src_rel.reltype
+
+        # Skip layout, notes, tags — we use our own
+        if any(skip in rt for skip in ['slideLayout', 'notesSlide', 'tags']):
+            continue
+
+        # External relationships (hyperlinks, etc.)
+        if src_rel.is_external:
+            try:
+                new_rId = new_part.rels.get_or_add_ext_rel(rt, src_rel.target_ref)
+                rId_map[src_rel.rId] = new_rId
+            except Exception:
+                pass
+            continue
+
+        # Internal relationships (images, media, charts, etc.)
+        try:
+            src_target = src_rel.target_part
+            blob = src_target.blob
+            ct = src_target.content_type
+
+            # Determine file extension from content type
+            ext = ct.split('/')[-1]
+            ext = ext.replace('jpeg', 'jpg')
+            if ext.startswith('x-'):
+                ext = ext[2:]  # x-emf -> emf, x-wmf -> wmf
+            if ext in ('vnd.openxmlformats-officedocument.drawing+xml',):
+                ext = 'xml'
+            if ext in ('octet-stream',):
+                ext = 'bin'
+
+            _img_counter += 1
+            new_pn = PackURI(f'/ppt/media/ws1_img{_img_counter}.{ext}')
+
+            # Create a new Part in the target package with the image data
+            new_target = Part(new_pn, ct, target_prs.part.package, blob)
+
+            # Create relationship from new slide to the new part
+            new_rId = new_part.relate_to(new_target, rt)
+            rId_map[src_rel.rId] = new_rId
+        except Exception:
+            # If we can't copy this part, leave rId unmapped
+            pass
+
+    # ── Phase 2: Copy shape XML with rId remapping ──
+    for shape in src_slide.shapes:
+        el = copy.deepcopy(shape._element)
+
+        # Remap all relationship rId references in the copied XML
+        for node in el.iter():
+            # Check r:embed, r:link, r:id (namespace-qualified attributes)
+            for r_attr in ('embed', 'link', 'id', 'blip'):
+                qname = f'{{{NS_R}}}{r_attr}'
+                if qname in node.attrib:
+                    old_val = node.attrib[qname]
+                    if old_val in rId_map:
+                        node.attrib[qname] = rId_map[old_val]
+
+            # Also check plain attributes that look like rId references
+            for attr_name, attr_val in list(node.attrib.items()):
+                if attr_val in rId_map and '{' not in attr_name:
+                    node.attrib[attr_name] = rId_map[attr_val]
+
+        sp_tree.append(el)
+
+    # ── Phase 3: Copy background if present ──
+    try:
+        src_bg = src_slide.background._element
+        if len(src_bg) > 0:
+            new_bg_el = copy.deepcopy(src_bg)
+            # Remap rId refs in background too
+            for node in new_bg_el.iter():
+                for r_attr in ('embed', 'link', 'id'):
+                    qname = f'{{{NS_R}}}{r_attr}'
+                    if qname in node.attrib:
+                        old_val = node.attrib[qname]
+                        if old_val in rId_map:
+                            node.attrib[qname] = rId_map[old_val]
+            existing_bg = new_slide.background._element
+            existing_bg.getparent().replace(existing_bg, new_bg_el)
+    except Exception:
+        pass
+
+    return new_slide
+
 
 def add_divider_slide(prs, title, subtitle=""):
     """Add a section divider/title slide with a colored background."""
-    slide_layout = prs.slide_layouts[6]  # Blank layout
-    slide = prs.slides.add_slide(slide_layout)
+    layout = _get_blank_layout(prs)
+    slide = prs.slides.add_slide(layout)
 
     # Background
     background = slide.background
@@ -508,8 +647,8 @@ def add_divider_slide(prs, title, subtitle=""):
 
 def add_placeholder_slide(prs, title, body):
     """Add a content placeholder slide with title and body text."""
-    slide_layout = prs.slide_layouts[6]  # Blank layout
-    slide = prs.slides.add_slide(slide_layout)
+    layout = _get_blank_layout(prs)
+    slide = prs.slides.add_slide(layout)
 
     # Title bar accent line
     left = Inches(0)
@@ -556,51 +695,6 @@ def add_placeholder_slide(prs, title, body):
         p.alignment = PP_ALIGN.LEFT
 
     return slide
-
-
-def copy_slide(source_prs, slide_index, target_prs):
-    """
-    Copy a slide from source presentation to target presentation.
-
-    This uses a deep-copy approach on the slide XML and relationships.
-    python-pptx doesn't have a native copy_slide, so we work at the XML level.
-    """
-    source_slide = source_prs.slides[slide_index]
-
-    # Add a blank slide to the target
-    slide_layout = target_prs.slide_layouts[6]  # Blank
-    new_slide = target_prs.slides.add_slide(slide_layout)
-
-    # Remove all default shapes from the blank layout
-    for shape in list(new_slide.shapes):
-        sp = shape._element
-        sp.getparent().remove(sp)
-
-    # Copy all shape elements from source to target
-    for shape in source_slide.shapes:
-        el = copy.deepcopy(shape._element)
-        new_slide.shapes._spTree.append(el)
-
-    # Copy slide-level relationships (images, charts, etc.)
-    for rel in source_slide.part.rels.values():
-        if "image" in rel.reltype:
-            # Copy image data
-            target_part = rel.target_part
-            new_slide.part.rels.get_or_add(
-                rel.reltype, target_part
-            )
-
-    # Copy background if set
-    if source_slide.background.fill.type is not None:
-        try:
-            bg_elem = copy.deepcopy(source_slide.background._element)
-            # Find and replace background element in new slide
-            new_bg = new_slide.background._element
-            new_bg.getparent().replace(new_bg, bg_elem)
-        except Exception:
-            pass  # Background copy is best-effort
-
-    return new_slide
 
 
 def add_source_note(slide, note_text):
