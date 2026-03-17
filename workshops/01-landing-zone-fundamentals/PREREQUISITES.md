@@ -96,18 +96,24 @@ Beyond the Microsoft Learn modules, participants should skim these resources (15
 
 > **WARNING — Azure Costs Can Be Significant**
 >
-> If participants deploy resources during or after the workshop, be aware of the following high-cost services that are part of the AI Landing Zone architecture:
+> The official [AI Landing Zones Cost Guide](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md) provides a detailed service-by-service breakdown. Key cost drivers:
 >
-> * **Azure Firewall** — ~$900-1,250/month (Standard SKU). This is the single largest cost driver in the "with Platform Landing Zone" architecture.
-> * **Azure Bastion** — ~$140-200/month (Standard SKU)
-> * **Azure AI Services / Azure OpenAI** — Pay-per-use; costs depend on model selection and token volume
-> * **Azure AI Search** — $75-300+/month depending on tier and replica count
-> * **Azure DDoS Protection** — ~$2,944/month (Standard plan); evaluate if required
-> * **Azure Cosmos DB** — Costs vary based on throughput; can be $25-500+/month
+> | Category | Monthly Cost (USD) |
+> |----------|-------------------|
+> | Networking (Firewall, App Gateway, Bastion, PEs, DNS) | $973-1,173 |
+> | Compute (VMs, Container Apps, Container Registry) | $440-650 |
+> | AI Services (Azure OpenAI, AI Search, AI Services) | $400-950 |
+> | Data (Cosmos DB, Storage, Key Vault, App Config) | $180-190 |
+> | Monitoring (Log Analytics, App Insights) | ~$135 |
 >
-> **Estimated total for a full "with Platform LZ" deployment: $1,500-3,500+/month**
+> **Estimated total for a standard deployment (all services): ~$2,128-3,098/month**
 >
-> **Estimated total for a "without Platform LZ" deployment: $300-1,200+/month**
+> The Cost Guide also includes three optimization scenarios:
+> * **Dev/Test** (~$980-1,350/month): Disable Firewall, Bastion, use Basic tiers
+> * **Minimal Production** (~$1,335-1,925/month): Remove App Gateway and Firewall
+> * **Maximum Optimization** (~$640-900/month): Consumption-only AI, minimal compute
+>
+> **Azure Pricing Calculator with pre-configured estimate**: [Open Calculator](https://azure.com/e/e92e102172054654a13cdc1cada6cecc)
 
 ### Cost Mitigation Strategies
 

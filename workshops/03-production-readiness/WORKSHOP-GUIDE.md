@@ -162,6 +162,7 @@
 - "In regulated industries, this is not optional — and in 2026, it's expected everywhere"
 
 #### Facilitated Exercise — Governance Matrix (10 min) *(GEN AI OPS — FILL IN)*
+- **Design Checklist walkthrough**: Open the [Design Checklist](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md) and walk through governance (G-R1 to G-R5) and security (S-R1 to S-R5) sections against the deployed environment
 - Participants build a governance matrix for their agent scenario:
   | Agent Type | Data Access | Tools Allowed | Escalation Policy | Audit Level |
   |------------|-------------|---------------|--------------------|-------------|
@@ -183,6 +184,8 @@
 - Walk through the 5 cost components: model inference, AI Search, compute, storage, networking
 - "Model inference is usually 50-70% of your AI workload cost"
 - Quick math: show cost of 10K req/day at different model tiers
+- **Reference**: Share the [AI Landing Zones Cost Guide](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md) — covers all 29 services with 3 optimization scenarios
+- Show the [Azure Pricing Calculator](https://azure.com/e/e92e102172054654a13cdc1cada6cecc) pre-configured estimate
 
 #### Talking Points — Optimization Levers (10 min)
 - Model selection: route simple queries to smaller/cheaper models

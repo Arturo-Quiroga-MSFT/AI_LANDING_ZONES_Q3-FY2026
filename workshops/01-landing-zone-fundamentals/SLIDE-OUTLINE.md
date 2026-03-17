@@ -48,7 +48,7 @@
 - "A secure, resilient, and scalable reference architecture"
 - Purpose-built for AI Apps & Agents
 - Implements Azure best practices from Day 0
-- Available as: Bicep, Terraform, Portal (coming soon)
+- Available as: Bicep, Terraform, [Portal (Deploy to Azure)](https://github.com/Azure/AI-Landing-Zones#deploy-to-azure)
 - **Source**: [Azure/AI-Landing-Zones](https://github.com/Azure/AI-Landing-Zones)
 
 ### Slide 7: Where AI Landing Zones Fit in CAF
@@ -227,7 +227,6 @@
 - N-R3: Private endpoints everywhere
 - N-R4: NSGs on all subnets
 - N-R5: WAF via App Gateway/Front Door
-- N-R6: APIM as AI Gateway
 - N-R7: Firewall for egress control
 - N-R8: Private DNS zones
 - N-R9: Restrict outbound by default
@@ -296,7 +295,7 @@
 | A | azd up | ~45 min | Limited |
 | B | Bicep | ~30-60 min | Full |
 | C | Terraform | ~30-60 min | Full |
-| D | Portal | Manual | Limited |
+| D | [Portal (Deploy to Azure)](https://github.com/Azure/AI-Landing-Zones#deploy-to-azure) | ~30-45 min | Limited |
 
 ### Slide 33: Path A - Azure Developer CLI (azd)
 - Repository: Deploy-Your-AI-Application-In-Production
@@ -309,18 +308,22 @@
 
 > **⚠️ Critical: Azure Costs Can Be Significant**
 
-- **Full "with Platform LZ" deployment**: ~$1,500-3,500+/month
-- **"Without Platform LZ" deployment**: ~$300-1,200+/month
+- **Standard deployment (all services)**: ~$2,128-3,098/month ([official Cost Guide](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md))
+- **Dev/Test optimized**: ~$980-1,350/month (disable Firewall, Bastion, use Basic tiers)
+- **Maximum optimization**: ~$640-900/month
+
+**Official Cost Guide**: [AI Landing Zones Cost Guide](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md) | [Azure Pricing Calculator Estimate](https://azure.com/e/e92e102172054654a13cdc1cada6cecc)
 
 **High-Cost Services to Watch**:
 
 | Service | Estimated Monthly Cost |
 |---------|----------------------|
-| Azure Firewall (Standard SKU) | $900-1,250 |
-| Azure DDoS Protection (Standard) | $2,944 |
-| Azure Bastion (Standard SKU) | $140-200 |
-| Azure AI Search (depends on tier) | $75-300+ |
-| Azure Cosmos DB (depends on throughput) | $25-500+ |
+| Azure Firewall (Standard SKU) | $400-500 |
+| Application Gateway (WAF V2) | $350-450 |
+| Azure Bastion (Standard SKU) | ~$140 |
+| Azure AI Search (S1) | ~$250 |
+| Azure Cosmos DB (provisioned) | ~$175 |
+| Azure OpenAI (usage-based) | $100-500 |
 
 **Required Actions**:
 
@@ -447,9 +450,10 @@ Key questions:
 |----------|------|
 | AI Landing Zones Repo | github.com/Azure/AI-Landing-Zones |
 | Deploy-Your-AI-App | github.com/microsoft/Deploy-Your-AI-Application-In-Production |
+| **Design Checklist (WAF)** | [AI-Landing-Zones-Design-Checklist.md](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md) |
+| **Cost Guide** | [AI-Landing-Zones-Cost-Guide.md](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md) |
 | **CAF AI Agent Adoption** | learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/ |
 | **Azure Architecture Diagram Builder** | github.com/Arturo-Quiroga-MSFT/azure-architecture-diagram-builder |
-| Design Checklist | (link) |
 | Partner Quick Reference | (internal) |
 | IaC Decision Framework | (internal) |
 

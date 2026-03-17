@@ -187,12 +187,16 @@
 - Human-in-the-loop is a design decision, not an afterthought
 - Responsible AI guardrails are mandatory, not optional
 - Audit everything
+- **Exercise**: Walk through [Design Checklist](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md) governance (G-R1 to G-R5) and security (S-R1 to S-R5) sections against your deployed environment
 
 ---
 
 ## Section 4: Cost Optimization & Scaling (5-6 slides)
 
 ### Slide 26: AI Workload Cost Model
+
+**Official Reference**: [AI Landing Zones Cost Guide](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md) | [Azure Pricing Calculator Estimate](https://azure.com/e/e92e102172054654a13cdc1cada6cecc)
+
 | Cost Component | Driver | Optimization Lever |
 |---------------|--------|-------------------|
 | Model inference | Tokens (prompt + completion) | Smaller models, shorter prompts, caching |
@@ -257,6 +261,8 @@
 | Resource | Link |
 |----------|------|
 | AI Landing Zones Repo | github.com/Azure/AI-Landing-Zones |
+| **Design Checklist (WAF)** | [AI-Landing-Zones-Design-Checklist.md](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md) |
+| **Cost Guide** | [AI-Landing-Zones-Cost-Guide.md](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md) |
 | CAF AI Agent Adoption | learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/ |
 | CAF Govern & Secure | learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/govern-secure |
 | CAF Manage Agents | learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/manage |

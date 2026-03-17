@@ -52,7 +52,8 @@ This workshop bridges the gap between a deployed AI workload (Workshop 2) and ru
 |----------|-------------|----------|
 | Workshop Guide | Step-by-step facilitation guide | [WORKSHOP-GUIDE.md](./WORKSHOP-GUIDE.md) |
 | Slide Deck Outline | Presentation structure | [SLIDE-OUTLINE.md](./SLIDE-OUTLINE.md) |
-| Design Checklist | Official Microsoft resource | [GitHub](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md) |
+| Design Checklist | WAF-aligned AI Landing Zone checklist (core exercise artifact) | [GitHub](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md) |
+| Cost Guide | Official per-service cost breakdown and optimization scenarios | [GitHub](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md) |
 
 ---
 
@@ -155,6 +156,7 @@ By the end of this workshop, participants will be able to:
 - Cost allocation and showback using tags
 - Right-sizing AI Search and Cosmos DB tiers
 - Design Checklist items: C-R1 through C-R4
+- **Reference**: [AI Landing Zones Cost Guide](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md) — official per-service pricing breakdown with 3 optimization scenarios (Dev/Test ~$980-1,350/mo, Minimal Prod ~$1,335-1,925/mo, Max Optimization ~$640-900/mo)
 
 **Key Resources**:
 - [Azure OpenAI Pricing](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/)
@@ -229,6 +231,8 @@ By the end of this workshop, participants will be able to:
 
 ### External Resources
 - [Azure AI Landing Zones GitHub](https://github.com/Azure/AI-Landing-Zones)
+- [AI Landing Zones Design Checklist](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md)
+- [AI Landing Zones Cost Guide](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md)
 - [CAF AI Agent Adoption](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/)
 - [CAF Govern & Secure AI Agents](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/govern-secure)
 - [CAF Manage AI Agents](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/manage)

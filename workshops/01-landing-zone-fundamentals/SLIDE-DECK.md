@@ -178,7 +178,7 @@ Speaker notes: Ask the audience: "How many of you have had customers ask about d
 
 - Purpose-built for **Azure AI Foundry** and Gen AI workloads
 - Implements Azure best practices **from Day 0**
-- Available as: **Bicep**, **Terraform**, Portal (coming soon)
+- Available as: **Bicep**, **Terraform**, **[Portal (Deploy to Azure)](https://github.com/Azure/AI-Landing-Zones#deploy-to-azure)**
 - Working IaC code — not just documentation
 
 **Source**: [Azure/AI-Landing-Zones](https://github.com/Azure/AI-Landing-Zones)
@@ -599,13 +599,12 @@ Speaker notes: We'll focus deep-dives on Networking, Identity, Security, and Mon
 | **N-R3** | **Private endpoints everywhere** | **Critical** |
 | N-R4 | NSGs on all subnets | High |
 | N-R5 | WAF via App Gateway/Front Door | High |
-| **N-R6** | **APIM as AI Gateway** | **Critical** |
 | N-R7 | Firewall for egress control | High |
 | N-R8 | Private DNS zones | High |
 | **N-R9** | **Restrict outbound by default** | **Critical** |
 
 <!--
-Speaker notes: N-R3, N-R6, and N-R9 come up in almost every enterprise conversation.
+Speaker notes: N-R3 and N-R9 come up in almost every enterprise conversation.
 -->
 
 ---
@@ -746,7 +745,7 @@ Speaker notes: 25 minutes. Four paths — each has its place.
 | **A** | `azd up` (Azure Developer CLI) | ~45 min | Limited |
 | **B** | Bicep | ~30-60 min | Full |
 | **C** | Terraform | ~30-60 min | Full |
-| **D** | Portal | Manual | Limited |
+| **D** | [Portal (Deploy to Azure)](https://github.com/Azure/AI-Landing-Zones#deploy-to-azure) | ~30-45 min | Limited |
 
 <!--
 Speaker notes: "Now that we understand what to build, let's talk about how to build it."
@@ -785,16 +784,17 @@ Speaker notes: This is the "show me it works" path. Great for demos and initial 
 
 | Service | Est. Monthly Cost |
 |---------|:-:|
-| Azure Firewall (Standard) | $900-1,250 |
-| Azure DDoS Protection (Standard) | $2,944 |
-| Azure Bastion (Standard) | $140-200 |
-| Azure AI Search | $75-300+ |
-| Azure Cosmos DB | $25-500+ |
+| Application Gateway (WAF V2) | $350-450 |
+| Azure Firewall (Standard) | $400-500 |
+| Azure Bastion (Standard) | ~$140 |
+| Azure AI Search (S1) | ~$250 |
+| Azure OpenAI (usage-based) | $100-500 |
 
-**Full "with Platform LZ"**: ~$1,500-3,500+/month
-**"Without Platform LZ"**: ~$300-1,200+/month
+**Standard deployment (all services)**: ~$2,128-3,098/month
+**Dev/Test optimized**: ~$980-1,350/month
 
 > **DELETE all resources immediately after the workshop.** Use `azd down` to tear down.
+> **Official Cost Guide**: [AI-Landing-Zones-Cost-Guide.md](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md)
 
 <!--
 Speaker notes: This is critical. Do NOT let participants leave resources running. Set up budget alerts first.
@@ -851,7 +851,7 @@ Azure-native team?
   └─ No ↓
 
 No IaC expertise?
-  └─ azd up (or wait for Portal)
+  └─ azd up (or Portal Deploy to Azure)
 ```
 
 See [IaC Decision Framework](../../docs/IAC-DECISION-FRAMEWORK.md) for details.

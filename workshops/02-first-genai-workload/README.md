@@ -82,7 +82,8 @@ az cognitiveservices usage list --location eastus2 -o table
 | Workshop Guide | Step-by-step facilitation guide | [WORKSHOP-GUIDE.md](./WORKSHOP-GUIDE.md) |
 | Slide Deck Outline | Presentation structure | [SLIDE-OUTLINE.md](./SLIDE-OUTLINE.md) |
 | Lab Exercises | Hands-on deployment steps | [EXERCISES.md](./EXERCISES.md) *(TODO)* |
-| Design Checklist | Official Microsoft resource | [GitHub](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md) |
+| Design Checklist | WAF-aligned AI Landing Zone checklist | [GitHub](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md) |
+| Cost Guide | Official per-service cost breakdown | [GitHub](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md) |
 | Deploy-Your-AI-App | Primary lab repository | [GitHub](https://github.com/microsoft/Deploy-Your-AI-Application-In-Production) |
 
 ---
@@ -312,6 +313,8 @@ After the workshop, collect feedback using:
 
 ### External Resources
 - [Azure AI Landing Zones GitHub](https://github.com/Azure/AI-Landing-Zones)
+- [AI Landing Zones Design Checklist](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md)
+- [AI Landing Zones Cost Guide](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md)
 - [Deploy Your AI App In Production](https://github.com/microsoft/Deploy-Your-AI-Application-In-Production)
 - [CAF AI Agent Adoption](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/)
 - [Microsoft Foundry Documentation](https://learn.microsoft.com/azure/ai-foundry/)

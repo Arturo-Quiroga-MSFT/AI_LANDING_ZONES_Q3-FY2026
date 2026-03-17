@@ -15,7 +15,7 @@
   - [ ] Link to [Partner Quick Reference Guide](../../docs/PARTNER-QUICK-REFERENCE.md)
   - [ ] Link to [Design Checklist](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md)
   - [ ] Prerequisites reminder (emphasize mandatory Microsoft Learn modules)
-  - [ ] **Cost warning**: Remind participants that deploying resources incurs significant Azure costs (Azure Firewall ~$900-1,250/month) and resources must be deleted after the workshop
+  - [ ] **Cost warning**: Remind participants that deploying resources incurs significant Azure costs — standard deployment is ~$2,128-3,098/month ([Cost Guide](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md)) — and resources must be deleted after the workshop
 - [ ] Test all links in presentation
 - [ ] Prepare demo subscription (optional)
 
@@ -74,9 +74,10 @@ By the end of today, you'll be able to:
 - [Recording notice if applicable]
 
 ⚠️ COST WARNING: If you plan to deploy Azure resources during or
-after this workshop, please be aware that a full AI Landing Zone
-deployment can cost $1,500-3,500+ per month. Azure Firewall alone
-is approximately $900-1,250/month. Please delete ALL resources
+after this workshop, please be aware that a standard AI Landing Zone
+deployment costs approximately $2,128-3,098 per month (see the
+official Cost Guide: https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md).
+Please delete ALL resources
 immediately after the workshop to avoid unexpected charges.
 See the Prerequisites document for a cleanup checklist.
 
@@ -340,7 +341,7 @@ We'll focus on the first four—they're where most conversations start."
 critical ones:
 
 N-R3: Private endpoints everywhere - This is non-negotiable
-N-R6: APIM as AI Gateway - Important for cost control and monitoring
+N-R5: WAF via App Gateway/Front Door - Web application protection
 N-R7: Firewall for egress - Control what the AI can access
 N-R9: Restrict outbound by default - Data exfiltration prevention
 
@@ -420,7 +421,7 @@ There are four deployment paths:
 A. Azure Developer CLI (azd up) - Fastest
 B. Bicep - Azure-native
 C. Terraform - Multi-cloud
-D. Portal - Coming soon
+D. Portal - Deploy to Azure (one-click from the repo README)
 
 Each has its place. Let me show you when to use which."
 ```
@@ -445,8 +446,9 @@ In about 45 minutes, you have 30+ Azure resources deployed with:
 Use this for PoCs, demos, or when speed matters most.
 
 ⚠️ IMPORTANT COST WARNING: A full deployment creates 30+ resources
-that can cost $1,500-3,500 per month. Azure Firewall alone runs
-about $900-1,250/month. If you deploy for learning purposes:
+that cost approximately $2,128-3,098 per month (see the official
+Cost Guide: https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md).
+If you deploy for learning purposes:
 
 1. Set up Azure Cost Management budget alerts BEFORE deploying
 2. Use the 'without Platform LZ' option to avoid Firewall/Bastion costs
@@ -495,7 +497,7 @@ Mostly Bicep, Terraform, or mixed?"
 1. Need fastest deployment? → azd up
 2. Multi-cloud strategy? → Terraform
 3. Azure-native team? → Bicep
-4. No IaC expertise? → azd up (or wait for Portal)
+4. No IaC expertise? → azd up (or Portal Deploy to Azure)
 
 There's a detailed framework in our partner resources if you need 
 to justify the choice to a customer."

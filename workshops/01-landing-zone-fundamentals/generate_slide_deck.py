@@ -485,7 +485,7 @@ make_callout_slide(
     [
         "Purpose-built for Azure AI Foundry and Gen AI workloads",
         "Implements Azure best practices from Day 0",
-        "Available as: Bicep, Terraform, Portal (coming soon)",
+        "Available as: Bicep, Terraform, Portal (Deploy to Azure)",
         "Working IaC code \u2014 not just documentation",
         "Source: github.com/Azure/AI-Landing-Zones",
     ],
@@ -767,7 +767,6 @@ for area_title, recs in [
         ["N-R3", "Private endpoints everywhere", "Critical"],
         ["N-R4", "NSGs on all subnets", "High"],
         ["N-R5", "WAF via App Gateway/Front Door", "High"],
-        ["N-R6", "APIM as AI Gateway", "Critical"],
         ["N-R7", "Firewall for egress control", "High"],
         ["N-R8", "Private DNS zones", "High"],
         ["N-R9", "Restrict outbound by default", "Critical"],
@@ -848,7 +847,7 @@ make_table_slide(
         ["A", "azd up (Azure Developer CLI)", "~45 min", "Limited"],
         ["B", "Bicep", "~30-60 min", "Full"],
         ["C", "Terraform", "~30-60 min", "Full"],
-        ["D", "Portal", "Manual", "Limited"],
+        ["D", "Portal (Deploy to Azure)", "~30-45 min", "Limited"],
     ],
     col_widths=[1.5, 4.5, 2.95, 2.95]
 )
@@ -876,16 +875,16 @@ make_table_slide(
     "\u26a0\ufe0f Cost Warning \u2014 Know Before You Deploy",
     ["Service", "Est. Monthly Cost"],
     [
-        ["Azure Firewall (Standard)", "$900-1,250"],
-        ["Azure DDoS Protection (Standard)", "$2,944"],
-        ["Azure Bastion (Standard)", "$140-200"],
-        ["Azure AI Search", "$75-300+"],
-        ["Azure Cosmos DB", "$25-500+"],
+        ["Application Gateway (WAF V2)", "$350-450"],
+        ["Azure Firewall (Standard)", "$400-500"],
+        ["Azure Bastion (Standard)", "~$140"],
+        ["Azure AI Search (S1)", "~$250"],
+        ["Azure OpenAI (usage-based)", "$100-500"],
         ["\u2014\u2014\u2014", "\u2014\u2014\u2014"],
-        ["Full 'with Platform LZ'", "$1,500-3,500+/month"],
-        ["'Without Platform LZ'", "$300-1,200+/month"],
+        ["Standard deployment (all services)", "~$2,128-3,098/month"],
+        ["Dev/Test optimized", "~$980-1,350/month"],
     ],
-    notes="CRITICAL: Do NOT let participants leave resources running. Remind them to run 'azd down' or delete the resource group.",
+    notes="CRITICAL: Do NOT let participants leave resources running. Official Cost Guide: github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md",
     col_widths=[7.0, 4.9]
 )
 
@@ -925,7 +924,7 @@ make_content_slide(
         "    \u2514\u2500 Yes \u2192 Bicep",
         "",
         "No IaC expertise?",
-        "    \u2514\u2500 azd up (or wait for Portal)",
+        "    \u2514\u2500 azd up (or Portal Deploy to Azure)",
     ],
     notes="See IaC Decision Framework doc for details."
 )

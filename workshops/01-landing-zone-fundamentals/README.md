@@ -67,7 +67,7 @@ Participants **must complete** these modules before the workshop (~1 hr 30 min t
 
 ### ⚠️ Cost Warning
 
-> **Azure costs can be significant.** A full "with Platform Landing Zone" deployment can cost **$1,500-3,500+/month** (Azure Firewall alone is ~$900-1,250/month). If you plan to deploy resources during or after the workshop, **delete all resources immediately after** to avoid unexpected charges. See [PREREQUISITES.md — Cost Considerations](./PREREQUISITES.md#cost-considerations) for details and a cleanup checklist.
+> **Azure costs can be significant.** A standard AI Landing Zone deployment costs **~$2,128-3,098/month** per the official [Cost Guide](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md). If you plan to deploy resources during or after the workshop, **delete all resources immediately after** to avoid unexpected charges. See [PREREQUISITES.md — Cost Considerations](./PREREQUISITES.md#cost-considerations) for details and a cleanup checklist.
 
 ---
 
@@ -78,7 +78,8 @@ Participants **must complete** these modules before the workshop (~1 hr 30 min t
 | Prerequisites & Pre-Work | Required modules, access, and cost warnings | [PREREQUISITES.md](./PREREQUISITES.md) |
 | Workshop Guide | Step-by-step facilitation guide | [WORKSHOP-GUIDE.md](./WORKSHOP-GUIDE.md) |
 | Slide Deck Outline | Presentation structure | [SLIDE-OUTLINE.md](./SLIDE-OUTLINE.md) |
-| Design Checklist | Official Microsoft resource | [GitHub](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md) |
+| Design Checklist | Official Microsoft WAF-aligned resource | [GitHub](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md) |
+| Cost Guide | Official per-service cost breakdown | [GitHub](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md) |
 | Exercises | Hands-on activities | [EXERCISES.md](./EXERCISES.md) |
 | Assessment Template | Customer discovery tool | `/templates/assessment-tools/` |
 
@@ -167,7 +168,7 @@ By the end of this workshop, participants will be able to:
 - Azure Developer CLI (azd up) - quick deploy
 - Bicep templates - Azure-native
 - Terraform modules - multi-cloud
-- Portal deployment (coming soon)
+- [Portal (Deploy to Azure)](https://github.com/Azure/AI-Landing-Zones#deploy-to-azure) - one-click from repo
 - Decision framework for choosing approach
 
 **Key Resources**:
@@ -243,6 +244,8 @@ After the workshop, collect feedback using:
 
 ### External Resources
 - [Azure AI Landing Zones GitHub](https://github.com/Azure/AI-Landing-Zones)
+- [AI Landing Zones Cost Guide](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md)
+- [AI Landing Zones Design Checklist](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md)
 - [Deploy Your AI App In Production](https://github.com/microsoft/Deploy-Your-AI-Application-In-Production)
 - [CAF AI Scenario](https://learn.microsoft.com/azure/cloud-adoption-framework/scenarios/ai/)
 - [WAF AI Workloads](https://learn.microsoft.com/azure/well-architected/ai/)
