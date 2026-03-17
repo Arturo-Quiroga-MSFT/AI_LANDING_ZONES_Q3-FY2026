@@ -19,11 +19,12 @@ This repository contains comprehensive guidance, workshops, and reference archit
 - **[IaC Decision Framework](docs/IAC-DECISION-FRAMEWORK.md)**: Guidance for choosing between azd, Bicep, Terraform, or Portal — includes Foundry agent environment setup options
 - **[Partner Engagement Methodology](docs/PARTNER-ENGAGEMENT-METHODOLOGY.md)**: 3-phase delivery framework for customer engagements
 - **[Deliverables Roadmap](docs/DELIVERABLES-ROADMAP.md)**: Project plan with task ownership and milestones
+- **[Follow-Up Tasks](docs/FOLLOW-UP-TASKS.md)**: Task tracker from team sync calls
 
 ### Workshops
 - **[Workshop 1: Landing Zone Fundamentals](workshops/01-landing-zone-fundamentals/)**: 2-3 hour introduction to AI Landing Zones, agent taxonomy, and decision frameworks (draft)
 - **[Workshop 2: From RAG to Agents](workshops/02-first-genai-workload/)**: 3-4 hour hands-on lab — deploy Landing Zone, build RAG app, explore AI agents (draft)
-- **Workshop 3: Landing Zones to Production**: Gen AI OPS bridge + agent governance (planned)
+- **[Workshop 3: Production Readiness](workshops/03-production-readiness/)**: Gen AI OPS bridge — governance, monitoring, CI/CD, and agent lifecycle (draft)
 
 ### Presentations
 - **[Partner Pitch Deck Outline](presentations/PARTNER-PITCH-DECK-OUTLINE.md)**: 17-20 slide business-value deck with CAF AI Agents framework
@@ -45,10 +46,12 @@ This repository contains comprehensive guidance, workshops, and reference archit
 │   ├── IAC-DECISION-FRAMEWORK.md        # IaC selection + Foundry setup guidance
 │   ├── PARTNER-ENGAGEMENT-METHODOLOGY.md  # 3-phase delivery framework
 │   ├── DELIVERABLES-ROADMAP.md          # Project plan and tasks
+│   ├── FOLLOW-UP-TASKS.md              # Task tracker from team calls
 │   └── TEAM-COORDINATION.md            # Collaboration guide
 ├── workshops/                  # Hands-on lab guides and exercises
 │   ├── 01-landing-zone-fundamentals/    # Workshop 1 (draft)
-│   └── 02-first-genai-workload/         # Workshop 2 (draft)
+│   ├── 02-first-genai-workload/         # Workshop 2 (draft)
+│   └── 03-production-readiness/         # Workshop 3 (draft)
 ├── presentations/              # Partner-facing presentation decks
 │   ├── PARTNER-PITCH-DECK-OUTLINE.md    # Business-value pitch deck
 │   └── CAF-AI-Agent-Adoption-LevelUp-2026-02-25.pptx  # CAF AI Agents LevelUp deck
@@ -117,7 +120,8 @@ The AI Landing Zone architecture includes:
 - **Jan 29, 2026**: Phase 1 complete — Partner enablement guides and Workshop 1 foundation
 - **Feb 25, 2026**: CAF AI Agents integration across all deliverables, Workshop 2 scaffold complete, P0-P2 enhancements done
 - **Feb 28, 2026**: Workshop 3 planning review
-- **Mar 2026**: Workshop pilots, IaC template development, V2 contribution ready for AI CoE
+- **Mar 2026**: Workshop 3 draft content, official repo resource incorporation (Cost Guide, Design Checklist, Portal Deploy to Azure), partner presentations added
+- **Mar–Apr 2026**: Workshop pilots, IaC template development, V2 contribution ready for AI CoE
 
 ## 🤝 Contributing
 
@@ -132,6 +136,6 @@ Microsoft Internal Use - Partner Enablement
 
 ---
 
-**Last Updated**: February 25, 2026  
+**Last Updated**: March 17, 2026  
 **Status**: Active Development 🚧  
-**Phase**: 2 In Progress — Workshops & CAF AI Agents Integration
+**Phase**: 2 In Progress — Workshop content, official repo alignment, partner presentations
