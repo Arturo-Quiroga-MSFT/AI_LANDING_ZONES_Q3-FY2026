@@ -191,7 +191,7 @@ Speaker notes: Emphasize this is hosted on the Azure GitHub org — official Mic
 
 ## Where AI Landing Zones Fit in CAF
 
-![bg right:40% 90%](https://learn.microsoft.com/azure/cloud-adoption-framework/_images/ready/azure-landing-zone-conceptual-diagram.png)
+![bg right:40% 90%](./images/azure-landing-zone-conceptual-diagram.png)
 
 **CAF Landing Zone Hierarchy:**
 
@@ -394,7 +394,7 @@ Speaker notes: The key question is: "Does the customer have an existing Azure La
 
 ## With Platform Landing Zone
 
-![bg right:55% 95%](https://github.com/Azure/AI-Landing-Zones/raw/main/media/AI-Landing-Zone-with-platform.png)
+![bg right:55% 95%](./images/AI-Landing-Zone-with-platform.png)
 
 - Leverages existing **hub-spoke networking**
 - Uses central **Firewall, Bastion, DNS**
@@ -409,7 +409,7 @@ Speaker notes: Walk through the layers top to bottom. Notice all private endpoin
 
 ## Without Platform Landing Zone
 
-![bg right:55% 95%](https://github.com/Azure/AI-Landing-Zones/raw/main/media/AI-Landing-Zone-without-platform.png)
+![bg right:55% 95%](./images/AI-Landing-Zone-without-platform.png)
 
 - Self-contained in a **single subscription**
 - Includes own networking, security, governance
