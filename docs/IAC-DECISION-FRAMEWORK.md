@@ -52,7 +52,7 @@
 
 | Factor | azd up (Quick Deploy) | Bicep | Terraform | Portal |
 |--------|----------------------|-------|-----------|--------|
-| **Deployment Time** | ~45 min | ~30-60 min | ~30-60 min | Manual |
+| **Deployment Time** | ~45 min | ~30-60 min | ~30-60 min | ~30-45 min |
 | **Customization** | Limited | Full | Full | Limited |
 | **Learning Curve** | Low | Medium | Medium-High | Low |
 | **Multi-cloud** | No | No | Yes | No |
@@ -61,7 +61,7 @@
 | **Modularity** | Fixed | AVM modules | AVM modules | N/A |
 | **Drift Detection** | Limited | ARM-based | Built-in | None |
 | **Enterprise Support** | MSFT | MSFT | HashiCorp + MSFT | MSFT |
-| **Official Repo** | [Deploy-Your-AI-App](https://github.com/microsoft/Deploy-Your-AI-Application-In-Production) | [AI-Landing-Zones/bicep](https://github.com/Azure/AI-Landing-Zones/tree/main/bicep) | [AI-Landing-Zones/terraform](https://github.com/Azure/AI-Landing-Zones/tree/main/terraform) | Coming Soon |
+| **Official Repo** | [Deploy-Your-AI-App](https://github.com/microsoft/Deploy-Your-AI-Application-In-Production) | [AI-Landing-Zones/bicep](https://github.com/Azure/AI-Landing-Zones/tree/main/bicep) | [AI-Landing-Zones/terraform](https://github.com/Azure/AI-Landing-Zones/tree/main/terraform) | [Deploy to Azure](https://github.com/Azure/AI-Landing-Zones#deploy-to-azure) |
 
 ---
 
@@ -215,7 +215,9 @@ terraform/
 
 ---
 
-### Option 4: Portal (Coming Soon)
+### Option 4: Portal (Deploy to Azure)
+
+**Access**: [Deploy to Azure](https://github.com/Azure/AI-Landing-Zones#deploy-to-azure) button on official repo README
 
 #### ✅ Choose When:
 - Customer wants no-code deployment

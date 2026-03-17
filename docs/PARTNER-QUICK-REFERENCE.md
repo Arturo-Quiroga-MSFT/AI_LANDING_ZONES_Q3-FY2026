@@ -71,10 +71,10 @@ Before diving into details, understand the big picture:
 | Document | What It Covers | Direct Link |
 |----------|----------------|-------------|
 | Design Checklist | 40+ recommendations across 10 design areas | [View](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md) |
-| FAQ | Common questions about AI Landing Zones | [View](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-FAQ.md) |
+| FAQ | Common questions about AI Landing Zones | [View](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-FAQs.md) |
 | What's New | Latest updates and changes | [View](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Whats-New.md) |
 | Roadmap | Upcoming features and plans | [View](https://aka.ms/ailz/roadmap) |
-| Cost Guide | Pricing and cost optimization | Referenced in Design Checklist (CO-R1 to CO-R4) |
+| Cost Guide | Pricing and cost optimization | [View](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md) |
 
 ---
 
@@ -118,7 +118,7 @@ The Design Checklist covers 10 critical areas. Here's what each includes:
 
 | Design Area | # Recommendations | Key Topics |
 |-------------|-------------------|------------|
-| **Networking** | N-R1 to N-R9 | DDoS, Bastion, Private Endpoints, NSGs, WAF, APIM, Firewall, DNS, Outbound |
+| **Networking** | N-R1 to N-R9 | DDoS, Bastion, Private Endpoints, NSGs, WAF, Firewall, DNS, Outbound |
 | **Identity** | I-R1 to I-R6 | Managed Identity, MFA/PIM, Entra ID, Conditional Access, RBAC |
 | **Security** | S-R1 to S-R5 | Defender for Cloud, Security Baseline, Purview, MITRE/OWASP, Prompt Shields |
 | **Monitoring** | M-R1 to M-R6 | Azure Monitor, Alerts, Tracing, Diagnostics, Model Drift |
@@ -194,7 +194,7 @@ azd up
 
 ### Path D: Portal Deployment
 
-**Status**: Coming Soon (per official repo)
+**Status**: Live — [Deploy to Azure](https://github.com/Azure/AI-Landing-Zones#deploy-to-azure) button on official repo README
 
 **Best for**: Quick PoCs, non-IaC deployments, visual learners
 
@@ -343,7 +343,7 @@ The AI Landing Zone follows:
 | Is this production-ready? | Yes, designed for production per Well-Architected Framework |
 | What about sovereign clouds? | Designed for Azure Public, but can be adapted |
 
-**More FAQs**: [Official FAQ](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-FAQ.md)
+**More FAQs**: [Official FAQ](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-FAQs.md)
 
 ---
 
