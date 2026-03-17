@@ -117,11 +117,13 @@
     - Identity and access management
     - Cost estimation and governance
   
-- [ ] **Workshop 2: From RAG to Agents — Deploying Your First Gen AI Workload** 👤 *Arturo* (Lead) + *Anahita* (Review)
+- [~] **Workshop 2: From RAG to Agents — Deploying Your First Gen AI Workload** 👤 *Arturo* (Lead) + *Anahita* (Review) → **Slide Decks Complete**
   - Duration: 3-4 hours (hands-on)
   - Audience: Technical partners with Azure experience
   - **Pillars**: AI Landing Zones (hands-on), Solution Optimization
   - **Narrative arc**: Start with RAG (baseline), understand when to graduate to agents
+  - ✅ SLIDE-DECK.md (MARP, 44 slides), SLIDE-DECK-EDITABLE.pptx (51 slides), generate_slide_deck.py
+  - Remaining: EXERCISES.md (hands-on lab steps)
   - Topics:
     - Deploy foundational Landing Zone infrastructure
     - Configure AI Foundry Service with standard (private networking) setup
@@ -131,10 +133,12 @@
     - Implement monitoring and observability
   - **CAF AI Agents references**: [Technology Plan](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/technology-solutions-plan-strategy) | [Build Process](https://learn.microsoft.com/azure/cloud-adoption-framework/ai-agents/build-secure-process)
 
-- [ ] **Workshop 3: Landing Zones to Production (Gen AI OPS Bridge)** 👤 *Arturo* (Lead) + *Ana Lopez Moreno* (Gen AI OPS Input)
+- [~] **Workshop 3: Landing Zones to Production (Gen AI OPS Bridge)** 👤 *Arturo* (Lead) + *Ana Lopez Moreno* (Gen AI OPS Input) → **Slide Decks Complete**
   - Duration: 4 hours
   - Audience: Advanced partners planning production deployments
   - **Pillars**: GenAIOps (deep), Solution Optimization (scaling), Agent Governance
+  - ✅ SLIDE-DECK.md (MARP, 35 slides), SLIDE-DECK-EDITABLE.pptx (45 slides), generate_slide_deck.py
+  - Remaining: Pipeline YAML samples, dashboard templates (pending Ana/George/Guilherme input)
   - Topics:
     - CI/CD pipelines for AI applications
     - Lifecycle management and versioning

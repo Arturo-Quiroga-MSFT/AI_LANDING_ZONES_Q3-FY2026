@@ -78,6 +78,9 @@ Participants **must complete** these modules before the workshop (~1 hr 30 min t
 | Prerequisites & Pre-Work | Required modules, access, and cost warnings | [PREREQUISITES.md](./PREREQUISITES.md) |
 | Workshop Guide | Step-by-step facilitation guide | [WORKSHOP-GUIDE.md](./WORKSHOP-GUIDE.md) |
 | Slide Deck Outline | Presentation structure | [SLIDE-OUTLINE.md](./SLIDE-OUTLINE.md) |
+| Slide Deck (MARP) | Markdown presentation (preview in VS Code with MARP extension) | [SLIDE-DECK.md](./SLIDE-DECK.md) |
+| Slide Deck (PPTX) | Editable PowerPoint generated via python-pptx | [SLIDE-DECK-EDITABLE.pptx](./SLIDE-DECK-EDITABLE.pptx) |
+| Slide Deck Generator | Python script to regenerate the PPTX | [generate_slide_deck.py](./generate_slide_deck.py) |
 | Design Checklist | Official Microsoft WAF-aligned resource | [GitHub](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md) |
 | Cost Guide | Official per-service cost breakdown | [GitHub](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md) |
 | Exercises | Hands-on activities | [EXERCISES.md](./EXERCISES.md) |

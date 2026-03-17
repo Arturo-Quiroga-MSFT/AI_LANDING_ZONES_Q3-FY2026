@@ -81,6 +81,9 @@ az cognitiveservices usage list --location eastus2 -o table
 |----------|-------------|----------|
 | Workshop Guide | Step-by-step facilitation guide | [WORKSHOP-GUIDE.md](./WORKSHOP-GUIDE.md) |
 | Slide Deck Outline | Presentation structure | [SLIDE-OUTLINE.md](./SLIDE-OUTLINE.md) |
+| Slide Deck (MARP) | Markdown presentation (preview in VS Code with MARP extension) | [SLIDE-DECK.md](./SLIDE-DECK.md) |
+| Slide Deck (PPTX) | Editable PowerPoint generated via python-pptx | [SLIDE-DECK-EDITABLE.pptx](./SLIDE-DECK-EDITABLE.pptx) |
+| Slide Deck Generator | Python script to regenerate the PPTX | [generate_slide_deck.py](./generate_slide_deck.py) |
 | Lab Exercises | Hands-on deployment steps | [EXERCISES.md](./EXERCISES.md) *(TODO)* |
 | Design Checklist | WAF-aligned AI Landing Zone checklist | [GitHub](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md) |
 | Cost Guide | Official per-service cost breakdown | [GitHub](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md) |

@@ -52,6 +52,9 @@ This workshop bridges the gap between a deployed AI workload (Workshop 2) and ru
 |----------|-------------|----------|
 | Workshop Guide | Step-by-step facilitation guide | [WORKSHOP-GUIDE.md](./WORKSHOP-GUIDE.md) |
 | Slide Deck Outline | Presentation structure | [SLIDE-OUTLINE.md](./SLIDE-OUTLINE.md) |
+| Slide Deck (MARP) | Markdown presentation (preview in VS Code with MARP extension) | [SLIDE-DECK.md](./SLIDE-DECK.md) |
+| Slide Deck (PPTX) | Editable PowerPoint generated via python-pptx | [SLIDE-DECK-EDITABLE.pptx](./SLIDE-DECK-EDITABLE.pptx) |
+| Slide Deck Generator | Python script to regenerate the PPTX | [generate_slide_deck.py](./generate_slide_deck.py) |
 | Design Checklist | WAF-aligned AI Landing Zone checklist (core exercise artifact) | [GitHub](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Design-Checklist.md) |
 | Cost Guide | Official per-service cost breakdown and optimization scenarios | [GitHub](https://github.com/Azure/AI-Landing-Zones/blob/main/docs/AI-Landing-Zones-Cost-Guide.md) |
 
