@@ -1,3 +1,5 @@
+![Azure AI Landing Zones](banners/ai_landing_zones_banner-1.png)
+
 # Azure AI Landing Zones - Partner Guidance IP
 
 Technical assets and guidance for Microsoft partners implementing Azure AI Landing Zones for production-ready Generative AI workloads.
